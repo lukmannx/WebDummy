@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('template');
 });
+
+Route::view('template','template.dashboards');

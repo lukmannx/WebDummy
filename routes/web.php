@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('main');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
+Route::view('template', 'layouts.dashboard');
+Route::view('produk', 'index');
+Route::view('team', 'team');

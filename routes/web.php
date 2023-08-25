@@ -17,8 +17,9 @@ Route::get('/', function () {
 });
 
 Route::view('template', 'layouts.dashboard');
-Route::view('produk', 'index');
-Route::view('team', 'team');
+Route::view('produk', 'dashboard.index');
+Route::view('team', 'dashboard.team');
+Route::view('berita', 'dashboard.berita');
 
 // Auth
 Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login', 'user');

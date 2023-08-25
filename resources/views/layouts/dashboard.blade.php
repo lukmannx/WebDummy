@@ -21,7 +21,7 @@
     <link rel="apple-touch-icon" sizes="76x76" href="{{asset('/assets/img/lugu.jpg')}}">
     <link rel="icon" type="image/png" href="{{asset('/assets/img/lugu.png')}}">
     <title>
-        Pengaduan
+        ABC Corp
     </title>
     <!--     Fonts and icons     -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
@@ -35,6 +35,7 @@
     <link href="{{asset('/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
     <!-- CSS Files -->
     <link id="pagestyle" href="{{asset('/assets/css/argon-dashboard.css?v=2.0.4')}}" rel="stylesheet" />
+    yield('css')
 </head>
 
 <body class="g-sidenav-show bg-gray-100">
@@ -75,8 +76,17 @@
                         <span class="nav-link-text text-white ms-1">Team</span>
                     </a>
                 </li>
+                <li class="nav-item mt-1 {{ Request::is('profile') ? 'active' : '' }}   ">
+                    <a class="nav-link " href="/berita">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="ni ni-email-83 text-white text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text text-white ms-1">News</span>
+                    </a>
+                </li>
                 <li class="nav-item mt-4">
-                    <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
+                    <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6 text-white">Account pages</h6>
                 </li>
                 <li class="nav-item mt-1 {{ Request::is('profile') ? 'active' : '' }}   ">
                     <a class="nav-link " href="/profile">

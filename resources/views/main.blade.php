@@ -126,20 +126,6 @@
     </div>
   </section><!-- End Hero -->
 
-    <main id="main">
-
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about">
-            <div class="container" data-aos="fade-up">
-
-                <div class="row mt-5">
-                    <div class="col-lg-6 ms-5 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-                        <img src="{{URL::asset('/img/about.jpg')}}" class="img-fluid" alt=""
-                            style="width:100%; height:520px;">
-                    </div>
-                    <div class="col-lg-5 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
-        </div>
-    </section><!-- End Hero -->
 
     <main id="main">
 

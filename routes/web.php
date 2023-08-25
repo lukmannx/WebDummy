@@ -11,25 +11,25 @@
 |
 */
 
+// Auth
+// Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login', 'user');
+// Route::post('/login', 'Auth\LoginController@login');
+// Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+Auth::routes();
+
 // Main
 Route::get('/', function () {
     return view('main');
 });
 
 Route::view('template', 'layouts.dashboard');
-Route::view('produk', 'index');
-Route::view('team', 'team');
-
-// Auth
-Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login', 'user');
-Route::post('/login', 'Auth\LoginController@login');
-Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+Route::resource('product', 'ProductController');
+Route::resource('team', 'TeamController');
+Route::resource('berita', 'BeritaController');
 
 // Admin Dashboard
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
-
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

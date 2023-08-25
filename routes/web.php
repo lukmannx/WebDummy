@@ -11,10 +11,22 @@
 |
 */
 
+// Main
 Route::get('/', function () {
     return view('main');
 });
 
+
+// Auth
+Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login', 'user');
+Route::post('/login', 'Auth\LoginController@login');
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+
+// Admin Dashboard
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

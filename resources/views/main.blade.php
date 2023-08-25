@@ -88,10 +88,44 @@
                     <h2>We are programmer</h2>
                 </div>
             </div>
-        </div>
 
+            <!-- <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-store-line"></i>
+            <h3><a href="">Lorem Ipsum</a></h3>
+          </div>
         </div>
-    </section><!-- End Hero -->
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-bar-chart-box-line"></i>
+            <h3><a href="">Dolor Sitema</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-calendar-todo-line"></i>
+            <h3><a href="">Sedare Perspiciatis</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-paint-brush-line"></i>
+            <h3><a href="">Magni Dolores</a></h3>
+          </div>
+        </div>
+        <div class="col-xl-2 col-md-4">
+          <div class="icon-box">
+            <i class="ri-database-2-line"></i>
+            <h3><a href="">Nemos Enimade</a></h3>
+          </div>
+        </div>
+      </div> -->
+      </div>
+
+    </div>
+  </section><!-- End Hero -->
+
 
     <main id="main">
 
@@ -122,11 +156,6 @@
                             <li><i class="ri-check-double-line"></i> Fleksibilitas Kerja: Perusahaan mungkin
                                 menawarkan fleksibilitas waktu dan lokasi kerja, sesuai dengan kebijakan yang ada.</li>
                         </ul>
-                        <p>
-                            Bekerja di PT ABC dapat memberikan pengalaman yang bermanfaat dan peluang untuk
-                            berkembang
-                            dalam industri teknologi yang dinamis.
-                        </p>
                     </div>
                 </div>
 
@@ -314,6 +343,22 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="col-lg-4 col-md-3 portfolio-item filter-web">
+                        <div class="portfolio-wrap">
+                            <img src="{{URL::asset('/img/portfolio/portfolio-2.jpg')}}" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Web 3</h4>
+                                <p>Web</p>
+                                <div class="portfolio-links">
+                                    <a href="{{URL::asset('/img/portfolio/portfolio-2.jpg')}}" data-gallery="portfolioGallery"
+                                        class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
                             <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" class="img-fluid" alt="">
@@ -321,11 +366,9 @@
                                 <h4>App 1</h4>
                                 <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}"
-                                        data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i
-                                            class="bx bx-plus"></i></a>
-                                    <a href="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" title="More Details"><i
-                                            class="bx bx-link"></i></a>
+                                    <a href="{{URL::asset('/img/portfolio/portfolio-3.jpg')}}" data-gallery="portfolioGallery"
+                                        class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -787,12 +830,6 @@
     <script src="{{asset('vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
     <script src="{{asset('vendor/swiper/swiper-bundle.min.js')}}"></script>
     <script src="{{asset('vendor/php-email-form/validate.js')}}"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
-    <!-- Swiper Js -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
 
     <!-- Template Main JS File -->
     <script src="{{asset('js/main.js')}}"></script>

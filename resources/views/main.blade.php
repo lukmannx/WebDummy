@@ -18,8 +18,19 @@
         href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
         rel="stylesheet">
 
+    <!-- SwiperJs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"
+        integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"
+        integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- Vendor CSS Files -->
-    {{-- <link href="{{asset('vendor/aos/aos.css')}}" rel="stylesheet"> --}}
+    <link href="{{asset('vendor/aos/aos.css')}}" rel="stylesheet">
     <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
     <link href="{{asset('vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
@@ -27,13 +38,12 @@
     <link href="{{asset('vendor/remixicon/remixicon.css')}}" rel="stylesheet">
     <link href="{{asset('vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
-    {{-- Online Vendor CSS --}}
+    <!-- Online Vendor CSS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
     <!-- Template Main CSS File -->
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
-
     <!-- =======================================================
   * Template Name: Gp
   * Updated: Jul 27 2023 with Bootstrap v5.3.1
@@ -51,15 +61,13 @@
 
             <h1 class="logo me-auto me-lg-0"><a href="index.html"><img src="{{asset('img/lugu.png ')}}"
                         alt=""><span></span></a></h1>
-            <!-- Uncomment below if you prefer to use an image logo -->
-            <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
             <nav id="navbar" class="navbar order-last order-lg-0">
                 <ul>
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
                     <li><a class="nav-link scrollto" href="#services">Services</a></li>
-                    <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
+                    <li><a class="nav-link scrollto " href="#portfolio">Product</a></li>
                     <li><a class="nav-link scrollto" href="#team">Team</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
             </nav>
@@ -77,7 +85,7 @@
             <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
                 <div class="col-xl-6 col-lg-8">
                     <h1>Powerful Digital Solutions With ABC<span>.</span></h1>
-                    <h2>We are team of talented digital marketers</h2>
+                    <h2>We are programmer</h2>
                 </div>
             </div>
 
@@ -130,19 +138,36 @@
                             style="width:100%; height:520px;">
                     </div>
                     <div class="col-lg-5 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about mt-5">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+                    <div class="col-lg-6 ms-5 justify-content-center d-flex align-items-center order-1 order-lg-2"
+                        data-aos="fade-left" data-aos-delay="100">
+                        <img src="{{URL::asset('/img/about.jpg')}}" class="img-fluid" alt="">
+                    </div>
+                    <div class="col-lg-5 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right"
+                        data-aos-delay="100">
                         <h3>Powerful Digital Solutions With ABC (Akrab, Bersejahtera, Ceria).</h3>
-                        <p class="fst-italic pt-4">
+                        <p class="fst-italic">
                             PT ABC adalah perusahaan yang bergerak di bidang pengembangan perangkat lunak (software
                             developer). Perusahaan ini fokus pada merancang, mengembangkan, dan menyediakan solusi
                             perangkat lunak untuk berbagai kebutuhan bisnis dan industri.
                         </p>
-                        <ul class="mt-3">
-                            <li><i class="ri-check-double-line me-3"></i>Pengakuan dan Penghargaan: PT ABC mengakui
+                        <ul>
+                            <li><i class="ri-check-double-line"></i> Pengakuan dan Penghargaan: PT ABC mengakui
                                 kontribusi karyawan dan memberikan penghargaan atas prestasi kerja yang luar biasa.</li>
-                            <li><i class="ri-check-double-line me-3"></i>Pengembangan Keahlian Teknis: Karyawan memiliki
+                            <li><i class="ri-check-double-line"></i> Duis Pengembangan Keahlian Teknis: Karyawan
+                                memiliki
                                 kesempatan untuk terus mengasah dan mengembangkan keahlian teknis dalam pengembangan
                                 perangkat lunak.</li>
-                            <li><i class="ri-check-double-line me-3"></i> Fleksibilitas Kerja: Perusahaan mungkin
+                            <li><i class="ri-check-double-line"></i> Fleksibilitas Kerja: Perusahaan mungkin
                                 menawarkan fleksibilitas waktu dan lokasi kerja, sesuai dengan kebijakan yang ada.</li>
                         </ul>
                     </div>
@@ -151,14 +176,16 @@
             </div>
         </section><!-- End About Section -->
 
+
+
         <!-- ======= Features Section ======= -->
-        <section id="features" class="features">
+        <section id="features" class="features mt-5">
             <div class="container" data-aos="fade-up">
 
-                <div class="row mt-5">
-                    <div class="image col-lg-5" style="background-image: url('{{URL::asset('/img/features.jpg')}}')" ;
+                <div class="row">
+                    <div class="image col-lg-6" style="background-image: url('{{URL::asset('/img/features.jpg')}}')"
                         data-aos="fade-right"></div>
-                    <div class="col-lg-6 ms-5" data-aos="fade-left" data-aos-delay="100">
+                    <div class="col-lg-5 ms-4" data-aos="fade-left" data-aos-delay="100">
                         <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
                             <i class="bx bx-receipt"></i>
                             <h4>Est labore ad</h4>
@@ -195,8 +222,8 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-                        <div class="icon-box">
+                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="icon-box">
                             <div class="icon"><i class="bx bxl-dribbble"></i></div>
                             <h4><a href="">Lorem Ipsum</a></h4>
                             <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
@@ -247,11 +274,8 @@
                             <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
                         </div>
                     </div>
-
                 </div>
-
-            </div>
-        </section><!-- End Services Section -->
+        </section><!-- End Hero -->
 
         <!-- ======= Cta Section ======= -->
         <section id="cta" class="cta">
@@ -266,7 +290,34 @@
                 </div>
 
             </div>
-        </section><!-- End Cta Section -->
+        </section>
+        <!-- End Cta Section -->
+
+
+        <section id="Berita" class="Berita">
+            <div class="container mt-5" data-aos="fade-up">
+
+                <div class="section-title">
+                    <h2>News</h2>
+                    <p>Latest News</p>
+                </div>
+
+                <div class="swiperr mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt=""></div>
+                        <div class="swiper-slide"><img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt=""></div>
+                        <div class="swiper-slide"><img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt=""></div>
+                        <div class="swiper-slide"><img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt=""></div>
+                        <div class="swiper-slide"><img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt=""></div>
+                        <div class="swiper-slide"><img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt=""></div>
+                        <div class="swiper-slide"><img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt=""></div>
+                        <div class="swiper-slide"><img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt=""></div>
+                        <div class="swiper-slide"><img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt=""></div>
+                    </div>
+                </div>
+
+
+        </section><!-- End Berita Section -->
 
         <!-- ======= Portfolio Section ======= -->
         <section id="portfolio" class="portfolio">
@@ -433,7 +484,7 @@
         </section><!-- End Portfolio Section -->
 
         <!-- ======= Counts Section ======= -->
-        <section id="counts" class="counts">
+        <section id="counts" class="counts mb-5">
             <div class="container" data-aos="fade-up">
 
                 <div class="row no-gutters">
@@ -453,7 +504,8 @@
                                         <i class="bi bi-emoji-smile"></i>
                                         <span data-purecounter-start="0" data-purecounter-end="65"
                                             data-purecounter-duration="2" class="purecounter"></span>
-                                        <p><strong>Happy Clients</strong> consequuntur voluptas nostrum aliquid ipsam
+                                        <p><strong>Happy Clients</strong> consequuntur voluptas nostrum aliquid
+                                            ipsam
                                             architecto ut.</p>
                                     </div>
                                 </div>
@@ -463,7 +515,8 @@
                                         <i class="bi bi-journal-richtext"></i>
                                         <span data-purecounter-start="0" data-purecounter-end="85"
                                             data-purecounter-duration="2" class="purecounter"></span>
-                                        <p><strong>Projects</strong> adipisci atque cum quia aspernatur totam laudantium
+                                        <p><strong>Projects</strong> adipisci atque cum quia aspernatur totam
+                                            laudantium
                                             et quia dere tan</p>
                                     </div>
                                 </div>
@@ -483,7 +536,8 @@
                                         <i class="bi bi-award"></i>
                                         <span data-purecounter-start="0" data-purecounter-end="20"
                                             data-purecounter-duration="4" class="purecounter"></span>
-                                        <p><strong>Awards</strong> rerum asperiores dolor alias quo reprehenderit eum et
+                                        <p><strong>Awards</strong> rerum asperiores dolor alias quo reprehenderit
+                                            eum et
                                             nemo pad der</p>
                                     </div>
                                 </div>
@@ -510,7 +564,40 @@
                                 <h4>Produk &amp; Marketing Rap</h4>
                                 <p>
                                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Di dunia yang penuh dengan baris kode, setiap titik koma adalah sebuah harapan dan
+                                    Di dunia yang penuh dengan baris kode, setiap titik koma adalah sebuah harapan
+                                    dan
+                                    setiap kurung kurawal adalah sebuah impian.
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="{{URL::asset('/img/counts-img.jpg')}}" class="testimonial-img img-fluid"
+                                    alt="">
+                                <h3>Kemet Hakim</h3>
+                                <h4>Produk &amp; Marketing Rap</h4>
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Di dunia yang penuh dengan baris kode, setiap titik koma adalah sebuah harapan
+                                    dan
+                                    setiap kurung kurawal adalah sebuah impian.
+                                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                                </p>
+                            </div>
+                        </div><!-- End testimonial item -->
+
+                        <div class="swiper-slide">
+                            <div class="testimonial-item">
+                                <img src="{{URL::asset('/img/counts-img.jpg')}}" class="testimonial-img img-fluid"
+                                    alt="">
+                                <h3>Kemet Hakim</h3>
+                                <h4>Produk &amp; Marketing Rap</h4>
+                                <p>
+                                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                                    Di dunia yang penuh dengan baris kode, setiap titik koma adalah sebuah harapan
+                                    dan
                                     setiap kurung kurawal adalah sebuah impian.
                                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                 </p>
@@ -533,7 +620,7 @@
                         </div><!-- End testimonial item -->
 
                     </div>
-                    <div class="swiper-pagination"></div>
+                    
                 </div>
 
             </div>
@@ -614,28 +701,10 @@
                                     <a href=""><i class="bi bi-instagram"></i></a>
                                     <a href=""><i class="bi bi-linkedin"></i></a>
                                 </div>
-                            </div> 
+                            </div>
                             <div class="member-info">
                                 <h4>Amanda Jepson</h4>
                                 <span>Accountant</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="300">
-                            <div class="member-img">
-                            <img src="{{URL::asset('/img/team/team-4.jpg')}}" class="img-fluid" alt="">
-                                <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>William Anderson</h4>
-                                <span>CTO</span>
                             </div>
                         </div>
                     </div>
@@ -733,8 +802,10 @@
                 <div class="row">
 
                     <div class="col-lg-3 col-md-6">
-                        <div class="footer-info">
-                            <h3>Gp<span>.</span></h3>
+                        <div class="footer-info ">
+                            <h1 class="logo me-auto me-lg-0 mb-5"><a href="index.html"><img
+                                        src="{{asset('img/lugu.png')}}" alt=""
+                                        style="width:25%; height:50px;"><span></span></a></h1>
                             <p>
                                 A108 Adam Street <br>
                                 NY 535022, USA<br><br>
@@ -788,7 +859,7 @@
 
         <div class="container">
             <div class="copyright">
-                &copy; Copyright <strong><span>Gp</span></strong>. All Rights Reserved
+                &copy; Copyright <strong><span>ABC</span></strong>. All Rights Reserved
             </div>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
@@ -800,7 +871,7 @@
         </div>
     </footer><!-- End Footer -->
 
-    {{-- <div id="preloader"></div> --}}
+    <div id="preloader"></div>
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
 
@@ -815,6 +886,9 @@
 
     <!-- Template Main JS File -->
     <script src="{{asset('js/main.js')}}"></script>
+
+    </main>
+    <!-- End #main -->
 
 </body>
 

@@ -14,7 +14,8 @@ class BeritaController extends Controller
      */
     public function index()
     {
-        //
+        $data = Berita::all();
+        return view('dashboard.berita', compact ('data'));
     }
 
     /**
@@ -35,7 +36,13 @@ class BeritaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = Berita::create($request->all());
+        if($request->hasFile('photo')){
+            $request->file('photo')->move('buktiizin/',$request->file('photo')->getClientOriginalName());
+            $data->photo = $request->file('photo')->getClientOriginalName();
+            $data->save();
+        }
+        return back();
     }
 
     /**
@@ -55,9 +62,10 @@ class BeritaController extends Controller
      * @param  \App\Berita  $berita
      * @return \Illuminate\Http\Response
      */
-    public function edit(Berita $berita)
+    public function edit($id)
     {
-        //
+        $data = Berita::find($id);
+        return view('dashboard.editberita', compact ('data'));
     }
 
     /**
@@ -67,9 +75,16 @@ class BeritaController extends Controller
      * @param  \App\Berita  $berita
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Berita $berita)
+    public function update(Request $request, $id)
     {
-        //
+        $data = Berita::find($id);
+        $data->update($request->all());
+        if($request->hasFile('photo')){
+            $request->file('photo')->move('buktiizin/',$request->file('photo')->getClientOriginalName());
+            $data->photo = $request->file('photo')->getClientOriginalName();
+            $data->save();
+        }
+        return redirect('/berita');
     }
 
     /**
@@ -78,8 +93,10 @@ class BeritaController extends Controller
      * @param  \App\Berita  $berita
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Berita $berita)
+    public function destroy($id)
     {
-        //
+        $data = Berita::find($id);
+        $data->delete();
+        return back();
     }
 }

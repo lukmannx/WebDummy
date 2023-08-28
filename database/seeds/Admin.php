@@ -14,7 +14,6 @@ class Admin extends Seeder
         $user = new \App\User;
         $user->name = "admin";
         $user->email = "admin@gmail.com";
-        $user->level = "admin";
         $user->password = \Hash::make('asdasd');
         $user->save();
     }

@@ -14,7 +14,8 @@ class TeamController extends Controller
      */
     public function index()
     {
-        return view('admin.team');
+        $data = Team::all();
+        return view('dashboard.team', compact ('data'));
     }
 
     /**
@@ -35,7 +36,13 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = Team::create($request->all());
+        if($request->hasFile('photo')){
+            $request->file('photo')->move('buktiizin/',$request->file('photo')->getClientOriginalName());
+            $data->photo = $request->file('photo')->getClientOriginalName();
+            $data->save();
+        }
+        return back();
     }
 
     /**

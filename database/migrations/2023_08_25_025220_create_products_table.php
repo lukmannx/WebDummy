@@ -17,8 +17,7 @@ class CreateProductsTable extends Migration
             $table->bigIncrements('id');
             $table -> string('name');
             $table -> string('description');
-            $table -> string('price');
-            $table -> enum('kategori', ['Stok Tersedia', 'Stok Habis']);
+            $table -> string('kategori');
             $table -> string('photo');
             $table->timestamps();
         });

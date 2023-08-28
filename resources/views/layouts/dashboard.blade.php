@@ -59,7 +59,7 @@
         <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
             <ul class="navbar-nav">
                 <li class="nav-item mt-1 {{ Request::is('profile') ? 'active' : '' }}   ">
-                    <a class="nav-link " href="/produk">
+                    <a class="nav-link " href="/product">
                         <div
                             class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
                             <i class="ni ni-cart text-white text-sm opacity-10"></i>
@@ -322,7 +322,7 @@
         CKEDITOR.config.allowedContent = true;
 
     </script>
-    yield('js')
+
 </body>
 
 </html>

@@ -14,7 +14,8 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('admin.product');
+        $product = Product::all();
+        return view('dashboard.product', compact ('product'));
     }
 
     /**
@@ -35,7 +36,13 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = Product::create($request->all());
+        if($request->hasFile('photo')){
+            $request->file('photo')->move('buktiizin/',$request->file('photo')->getClientOriginalName());
+            $product->photo = $request->file('photo')->getClientOriginalName();
+            $product->save();
+        }
+        return back();
     }
 
     /**

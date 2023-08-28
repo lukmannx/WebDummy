@@ -33,3 +33,5 @@ Route::get('/dashboard', function () {
 });
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::view('/contoh', 'login');

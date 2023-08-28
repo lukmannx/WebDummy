@@ -406,7 +406,7 @@ h6 {
 #hero {
     width: 100%;
     height: 100vh;
-    background: url("../img/hero-bg.jpg") top center;
+    background: url("../img/building.jpg") top center;
     background-size: cover;
     position: relative;
 }
@@ -709,10 +709,14 @@ section {
 /*--------------------------------------------------------------
 # Cta
 --------------------------------------------------------------*/
+
 .cta {
     background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") fixed center center;
     background-size: cover;
-    padding: 60px 0;
+    height: 350px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
 }
 
 .cta h3 {
@@ -725,25 +729,6 @@ section {
     color: #fff;
 }
 
-.cta .cta-btn {
-    font-family: "Raleway", sans-serif;
-    font-weight: 600;
-    font-size: 16px;
-    letter-spacing: 1px;
-    display: inline-block;
-    padding: 8px 28px;
-    border-radius: 4px;
-    transition: 0.5s;
-    margin-top: 10px;
-    border: 2px solid #fff;
-    color: #fff;
-}
-
-.cta .cta-btn:hover {
-    background: #ffc451;
-    border-color: #ffc451;
-    color: #151515;
-}
 
 /*--------------------------------------------------------------
 # Berita
@@ -1607,3 +1592,38 @@ section {
     font-size: 13px;
     color: #fff;
 }
+
+.card-news {
+    content: '';
+    background-color: rgba(0, 0, 0, .75);
+    position: absolute;
+    z-index: 0;
+    inset: 60% 0 0 0;
+}
+
+
+.card-news p {
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    justify-content: center;
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.card-news h1 {
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    justify-content: center;
+    display: flex;
+    font-size: 18px;
+}
+

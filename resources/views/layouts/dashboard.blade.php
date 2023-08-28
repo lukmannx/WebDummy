@@ -35,7 +35,7 @@
     <link href="{{asset('/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
     <!-- CSS Files -->
     <link id="pagestyle" href="{{asset('/assets/css/argon-dashboard.css?v=2.0.4')}}" rel="stylesheet" />
-    yield('css')
+    @yield('css')
 </head>
 
 <body class="g-sidenav-show bg-gray-100">
@@ -322,7 +322,7 @@
         CKEDITOR.config.allowedContent = true;
 
     </script>
-
+    @yield('js')
 </body>
 
 </html>

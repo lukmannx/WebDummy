@@ -67,13 +67,15 @@
                     <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
                     <li><a class="nav-link scrollto" href="#about">About</a></li>
                     <li><a class="nav-link scrollto" href="#services">Services</a></li>
+                    <li><a class="nav-link scrollto" href="#Berita">News</a></li>
                     <li><a class="nav-link scrollto " href="#portfolio">Product</a></li>
+                    <li><a class="nav-link scrollto" href="#testimonials">Testimoni</a></li>
                     <li><a class="nav-link scrollto" href="#team">Team</a></li>
                     <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
             </nav>
             <!-- .navbar -->
 
-            <a href="#about" class="get-started-btn scrollto">Contact US</a>
+            <a href="#contact" class="get-started-btn scrollto">Contact US</a>
 
         </div>
     </header><!-- End Header -->
@@ -85,42 +87,11 @@
             <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
                 <div class="col-xl-6 col-lg-8">
                     <h1>Powerful Digital Solutions With ABC<span>.</span></h1>
-                    <h2>We are programmer</h2>
+                    <h2>We are <span class="auto-type">programmer</span></h2>
                 </div>
             </div>
 
-            <!-- <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-store-line"></i>
-            <h3><a href="">Lorem Ipsum</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-bar-chart-box-line"></i>
-            <h3><a href="">Dolor Sitema</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-calendar-todo-line"></i>
-            <h3><a href="">Sedare Perspiciatis</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-paint-brush-line"></i>
-            <h3><a href="">Magni Dolores</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-database-2-line"></i>
-            <h3><a href="">Nemos Enimade</a></h3>
-          </div>
-        </div>
-      </div> -->
+
         </div>
 
         </div>
@@ -141,20 +112,20 @@
                     <div class="col-lg-5 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right"
                         data-aos-delay="100">
                         <h3>Powerful Digital Solutions With ABC (Akrab, Bersejahtera, Ceria).</h3>
-                        <p class="fst-italic">
-                            PT ABC adalah perusahaan yang bergerak di bidang pengembangan perangkat lunak (software
-                            developer). Perusahaan ini fokus pada merancang, mengembangkan, dan menyediakan solusi
-                            perangkat lunak untuk berbagai kebutuhan bisnis dan industri.
+                        <p class="fst-italic mt-4">
+                            PT ABC is a company engaged in the field of software development (software developer). The
+                            company focuses on designing, developing, and providing software solutions for various
+                            business and industrial needs.
                         </p>
                         <ul>
-                            <li><i class="ri-check-double-line"></i> Pengakuan dan Penghargaan: PT ABC mengakui
-                                kontribusi karyawan dan memberikan penghargaan atas prestasi kerja yang luar biasa.</li>
-                            <li><i class="ri-check-double-line"></i> Duis Pengembangan Keahlian Teknis: Karyawan
-                                memiliki
-                                kesempatan untuk terus mengasah dan mengembangkan keahlian teknis dalam pengembangan
-                                perangkat lunak.</li>
-                            <li><i class="ri-check-double-line"></i> Fleksibilitas Kerja: Perusahaan mungkin
-                                menawarkan fleksibilitas waktu dan lokasi kerja, sesuai dengan kebijakan yang ada.</li>
+                            <li><i class="ri-check-double-line"></i> Recognition and Awards: PT ABC acknowledges the
+                                contributions of its employees and provides recognition for outstanding job performance.
+                            </li>
+                            <li><i class="ri-check-double-line"></i>Technical Skill Development: Employees have the
+                                opportunity to continually hone and enhance their technical skills in software
+                                development.</li>
+                            <li><i class="ri-check-double-line"></i> Work Flexibility: The company may offer flexibility
+                                in terms of work hours and location, in accordance with existing policies.</li>
                         </ul>
                     </div>
                 </div>
@@ -173,24 +144,29 @@
                         data-aos="fade-right"></div>
                     <div class="col-lg-5 ms-4" data-aos="fade-left" data-aos-delay="100">
                         <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
-                            <i class="bx bx-receipt"></i>
-                            <h4>Est labore ad</h4>
-                            <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-                        </div>
-                        <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
-                            <i class="bx bx-cube-alt"></i>
-                            <h4>Harum esse qui</h4>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                        </div>
-                        <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
-                            <i class="bx bx-images"></i>
-                            <h4>Aut occaecati</h4>
-                            <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+                            <i class="bx bx-current-location"></i>
+                            <h4>Location Flexibility</h4>
+                            <p>Many companies in this industry adopt remote work models, offering flexibility to work
+                                from various locations.</p>
                         </div>
                         <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
                             <i class="bx bx-shield"></i>
-                            <h4>Beatae veritatis</h4>
-                            <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+                            <h4>Sense of Fulfillment</h4>
+                            <p>Protecting organizations from cyber attacks brings a sense of fulfillment and
+                                meaningfulness as you help secure vital information and infrastructure from threats.</p>
+                        </div>
+                        <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
+                            <i class="bx bx-network-chart"></i>
+                            <h4>Networking</h4>
+                            <p>Working in the network security industry enables interactions with fellow technology
+                                professionals, helping you build a wide network of contacts.</p>
+                        </div>
+                        <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
+                            <i class="bx bx-cross"></i>
+                            <h4>High Demand</h4>
+                            <p> The increasing complexity of cyber threats drives a high demand for network security
+                                solutions. Organizations require strong protection to safeguard their data and systems
+                                from evolving attacks.</p>
                         </div>
                     </div>
                 </div>
@@ -210,9 +186,10 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
                         <div class="icon-box">
-                            <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                            <h4><a href="">Lorem Ipsum</a></h4>
-                            <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+                            <div class="icon"><i class="bx bx-shield-alt-2"></i></div>
+                            <h4><a href="">Security Consultation</a></h4>
+                            <p>Providing consultations to organizations regarding effective network security strategies
+                                based on specific needs and risks.</p>
                         </div>
                     </div>
 
@@ -220,17 +197,19 @@
                         data-aos-delay="200">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-file"></i></div>
-                            <h4><a href="">Sed ut perspiciatis</a></h4>
-                            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+                            <h4><a href="">Network Security Management</a></h4>
+                            <p>Managing and monitoring network infrastructure to detect and address potential threats
+                                while maintaining compliance with security policies.</p>
                         </div>
                     </div>
 
                     <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in"
                         data-aos-delay="300">
                         <div class="icon-box">
-                            <div class="icon"><i class="bx bx-tachometer"></i></div>
-                            <h4><a href="">Magni Dolores</a></h4>
-                            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+                            <div class="icon"><i class="bx bx-clipboard"></i></div>
+                            <h4><a href="">Security Training and Education</a></h4>
+                            <p>Offering training to internal teams on best practices for maintaining network security
+                                and responding to attacks.</p>
                         </div>
                     </div>
 
@@ -238,8 +217,9 @@
                         data-aos-delay="100">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-world"></i></div>
-                            <h4><a href="">Nemo Enim</a></h4>
-                            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+                            <h4><a href="">Security Maintenance and Updates</a></h4>
+                            <p>Conducting routine maintenance and updates to keep systems and applications secure and
+                                protected.</p>
                         </div>
                     </div>
 
@@ -247,8 +227,9 @@
                         data-aos-delay="200">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-slideshow"></i></div>
-                            <h4><a href="">Dele cardo</a></h4>
-                            <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
+                            <h4><a href="">Threat Analysis and Security Intelligence</a></h4>
+                            <p>Identifying and analyzing emerging and evolving cyber threats, as well as providing
+                                security intelligence information to clients.</p>
                         </div>
                     </div>
 
@@ -256,8 +237,9 @@
                         data-aos-delay="300">
                         <div class="icon-box">
                             <div class="icon"><i class="bx bx-arch"></i></div>
-                            <h4><a href="">Divera don</a></h4>
-                            <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
+                            <h4><a href="">Identity and Access Management</a></h4>
+                            <p>Managing and controlling user access rights to systems and applications, implementing
+                                strong authentication and authorization measures.</p>
                         </div>
                     </div>
                 </div>
@@ -265,14 +247,10 @@
 
         <!-- ======= Cta Section ======= -->
         <section id="cta" class="cta">
-            <div class="container" data-aos="zoom-in">
+            <div class="" data-aos="zoom-in">
 
-                <div class="text-center">
-                    <h3>Call To Action</h3>
-                    <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                        mollit anim id est laborum.</p>
-                    <a class="cta-btn" href="#">Call To Action</a>
+                <div>
+                    <h1><a href="index.html"><img src="{{asset('img/lugu.png')}}" alt=""><span></span></a></h1>
                 </div>
 
             </div>
@@ -290,32 +268,23 @@
 
                 <div class="swiperr mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
+                        <div class="swiper-slide">
+                            <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
+                            <div class="card-news">
+                                <h1>Seorang anak Meninggal</h1>
+                                <p>makan</p>
+                            </div>
+
                         </div>
-                        <div class="swiper-slide"><img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
-                        </div>
-                        <div class="swiper-slide"><img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
-                        </div>
-                        <div class="swiper-slide"><img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
-                        </div>
-                        <div class="swiper-slide"><img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
-                        </div>
-                        <div class="swiper-slide"><img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
-                        </div>
-                        <div class="swiper-slide"><img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
-                        </div>
-                        <div class="swiper-slide"><img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
-                        </div>
-                        <div class="swiper-slide"><img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
-                        </div>
+
                     </div>
                 </div>
 
 
         </section><!-- End Berita Section -->
 
-        <!-- ======= Portfolio Section ======= -->
-        <section id="portfolio" class="portfolio">
+        <!-- ======= Product Section ======= -->
+        <section id="portfolio" class="portfolio mt-5">
             <div class="container" data-aos="fade-up">
 
                 <div class="section-title">
@@ -432,10 +401,6 @@
                             </div>
                         </div>
                     </div>
-
-
-
-
                 </div>
 
             </div>
@@ -451,31 +416,27 @@
                     <div class="col-xl-7 ps-4 ps-lg-5 pe-4 pe-lg-1 d-flex align-items-stretch" data-aos="fade-left"
                         data-aos-delay="100">
                         <div class="content d-flex flex-column justify-content-center">
-                            <h3>Voluptatem dignissimos provident quasi</h3>
+                            <h3>Achievement</h3>
                             <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                                incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                                The achievements that have been obtained by this company <br>
+                                "Soaring Towards Success: Achievements of PT ABC in the Network Security Industry"
                             </p>
-                            <div class="row">
+                            <div class="row mt-4">
                                 <div class="col-md-6 d-md-flex align-items-md-stretch">
                                     <div class="count-box">
                                         <i class="bi bi-emoji-smile"></i>
                                         <span data-purecounter-start="0" data-purecounter-end="65"
                                             data-purecounter-duration="2" class="purecounter"></span>
-                                        <p><strong>Happy Clients</strong> consequuntur voluptas nostrum aliquid
-                                            ipsam
-                                            architecto ut.</p>
+                                        <p><strong>Happy Clients</strong> <br> Doing projects for several clients</p>
                                     </div>
                                 </div>
-
                                 <div class="col-md-6 d-md-flex align-items-md-stretch">
                                     <div class="count-box">
                                         <i class="bi bi-journal-richtext"></i>
                                         <span data-purecounter-start="0" data-purecounter-end="85"
                                             data-purecounter-duration="2" class="purecounter"></span>
-                                        <p><strong>Projects</strong> adipisci atque cum quia aspernatur totam
-                                            laudantium
-                                            et quia dere tan</p>
+                                        <p><strong>Projects</strong>PT ABC has received quite a lot of projects from
+                                            many clients</p>
                                     </div>
                                 </div>
 
@@ -483,27 +444,25 @@
                                     <div class="count-box">
                                         <i class="bi bi-clock"></i>
                                         <span data-purecounter-start="0" data-purecounter-end="35"
-                                            data-purecounter-duration="4" class="purecounter"></span>
-                                        <p><strong>Years of experience</strong> aut commodi quaerat modi aliquam nam
-                                            ducimus aut voluptate non vel</p>
+                                            data-purecounter-duration="2" class="purecounter"></span>
+                                        <p><strong>Years of experience</strong> The experience that has been carried out
+                                            by pt abc</p>
                                     </div>
                                 </div>
 
                                 <div class="col-md-6 d-md-flex align-items-md-stretch">
                                     <div class="count-box">
                                         <i class="bi bi-award"></i>
-                                        <span data-purecounter-start="0" data-purecounter-end="20"
-                                            data-purecounter-duration="4" class="purecounter"></span>
-                                        <p><strong>Awards</strong> rerum asperiores dolor alias quo reprehenderit
-                                            eum et
-                                            nemo pad der</p>
+                                        <span data-purecounter-start="0" data-purecounter-end="30"
+                                            data-purecounter-duration="2" class="purecounter"></span>
+                                        <p><strong>Awards</strong> and many awards have been obtained by PT ABC</p>
                                     </div>
                                 </div>
                             </div>
-                        </div><!-- End .content-->
+                        </div>
+                        <!-- End .content-->
                     </div>
                 </div>
-
             </div>
         </section><!-- End Counts Section -->
 
@@ -528,7 +487,8 @@
                                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                 </p>
                             </div>
-                        </div><!-- End testimonial item -->
+                        </div>
+                        <!-- End testimonial item -->
 
                         <div class="swiper-slide">
                             <div class="testimonial-item">
@@ -554,9 +514,9 @@
                                 <h4>Produk &amp; Marketing Rap</h4>
                                 <p>
                                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Di dunia yang penuh dengan baris kode, setiap titik koma adalah sebuah harapan
-                                    dan
-                                    setiap kurung kurawal adalah sebuah impian.
+                                    In a world full of lines of code, every semicolon is a wish
+                                    And
+                                    every curly brace is a dream.
                                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                 </p>
                             </div>
@@ -570,8 +530,8 @@
                                 <h4>Programmer</h4>
                                 <p>
                                     <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                    Ketika kamu memecahkan sebuah masalah dengan kode, kamu merasa seperti seorang
-                                    pahlawan yang menaklukkan dunia.
+                                    When you solve a problem with code, you feel like a person
+                                    the hero who conquered the world.
                                     <i class="bx bxs-quote-alt-right quote-icon-right"></i>
                                 </p>
                             </div>
@@ -600,10 +560,7 @@
                             <div class="member-img">
                                 <img src="{{URL::asset('/img/team/team-1.jpg')}}" class="img-fluid" alt="">
                                 <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+
                                 </div>
                             </div>
                             <div class="member-info">
@@ -618,10 +575,7 @@
                             <div class="member-img">
                                 <img src="{{URL::asset('/img/team/team-2.jpg')}}" class="img-fluid" alt="">
                                 <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+
                                 </div>
                             </div>
                             <div class="member-info">
@@ -636,10 +590,7 @@
                             <div class="member-img">
                                 <img src="{{URL::asset('/img/team/team-3.jpg')}}" class="img-fluid" alt="">
                                 <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+
                                 </div>
                             </div>
                             <div class="member-info">
@@ -654,10 +605,7 @@
                             <div class="member-img">
                                 <img src="{{URL::asset('/img/team/team-4.jpg')}}" class="img-fluid" alt="">
                                 <div class="social">
-                                    <a href=""><i class="bi bi-twitter"></i></a>
-                                    <a href=""><i class="bi bi-facebook"></i></a>
-                                    <a href=""><i class="bi bi-instagram"></i></a>
-                                    <a href=""><i class="bi bi-linkedin"></i></a>
+
                                 </div>
                             </div>
                             <div class="member-info">
@@ -702,7 +650,7 @@
                             <div class="email">
                                 <i class="bi bi-envelope"></i>
                                 <h4>Email:</h4>
-                                <p>info@example.com</p>
+                                <p>ptabcrate@gmail.com</p>
                             </div>
 
                             <div class="phone">
@@ -761,14 +709,15 @@
 
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-info ">
-                            <h1 class="logo me-auto me-lg-0 mb-5"><a href="index.html"><img
+                            <h1 class="logo me-auto me-lg-0 mb-3"><a href="index.html"><img
                                         src="{{asset('img/lugu.png')}}" alt=""
                                         style="width:25%; height:50px;"><span></span></a></h1>
                             <p>
-                                A108 Adam Street <br>
-                                NY 535022, USA<br><br>
-                                <strong>Phone:</strong> +1 5589 55488 55<br>
-                                <strong>Email:</strong> info@example.com<br>
+                                Palem Ganda Asri 2, Cluster AA Blok E No. 28, Karang Mulya, Karang Tengah,
+                                Tangerang, <br>
+                                Banten 15157 indonesia<br><br>
+                                <strong>Phone:</strong> +62 8223 2234 23<br>
+                                <strong>Email:</strong> ptabcrate@gmail.com<br>
                             </p>
                             <div class="social-links mt-3">
                                 <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -794,11 +743,14 @@
                     <div class="col-lg-3 col-md-6 footer-links">
                         <h4>Our Services</h4>
                         <ul>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Security Consultation</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Network Security Management</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">>Security Training and Education</a>
+                            </li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Security Maintenance and Updates</a>
+                            </li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Threat Analysis and Security
+                                    Intelligence</a></li>
                         </ul>
                     </div>
 
@@ -845,8 +797,23 @@
     <!-- Template Main JS File -->
     <script src="{{asset('js/main.js')}}"></script>
 
+    <!-- Typed JS -->
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ['Programmer', 'Network Security', 'Application Security'],
+            typeSpeed: 100,
+            backSpeed: 100,
+            loop: true
+        })
+
+    </script>
+
     </main>
     <!-- End #main -->
+
+
 
 </body>
 

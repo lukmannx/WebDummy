@@ -31,7 +31,9 @@
                                 <input class="form-control bg-white" type="text">
                             </div>
                         </div>
-
+                        <div class="col ms-3">
+                            <button type="submit" class="btn btn-primary float-right">Buat</button>
+                        </div>
                     </div>
                     <hr class="horizontal dark">
                 </div>
@@ -41,7 +43,6 @@
     </div>
     <div class="card shadow-lg mt-4">
         <div class="card-body ms-3">
-
         </div>
         <div class="container-fluid">
             <div class="row">

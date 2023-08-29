@@ -45,7 +45,6 @@
                     </div>
                 </div>
             </div>
-
             @if(!$data->isEmpty())
             <div class="col-md-8">
                 <label class="fs-4 text-white">Berita</label>

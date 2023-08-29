@@ -32,6 +32,7 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'ProductController@index')->name('home');
 
 Route::view('/contoh', 'login');
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');

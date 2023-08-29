@@ -56,7 +56,7 @@
             </a>
         </div>
         <hr class="horizontal bg-white mt-0">
-        <div class="collapse navbar-collapse  w-auto " id="sidenav-collapse-main">
+        <div class="collapse navbar-collapse  w-auto h-auto" id="sidenav-collapse-main">
             <ul class="navbar-nav">
                 <li class="nav-item mt-1 {{ Request::is('profile') ? 'active' : '' }}   ">
                     <a class="nav-link " href="/product">
@@ -95,6 +95,15 @@
                             <i class="ni ni-single-02 text-white text-sm opacity-10"></i>
                         </div>
                         <span class="nav-link-text text-white ms-1">Profile</span>
+                    </a>
+                </li>
+                <li class="nav-item mt-1 {{ Request::is('profile') ? 'active' : '' }}   ">
+                    <a class="nav-link " href="/logout">
+                        <div
+                            class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                            <i class="fa fa-sign-out text-white text-sm opacity-10"></i>
+                        </div>
+                        <span class="nav-link-text text-white ms-1">Logout</span>
                     </a>
                 </li>
             </ul>

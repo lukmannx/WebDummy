@@ -75,7 +75,10 @@
             </nav>
             <!-- .navbar -->
 
-            <a href="#contact" class="get-started-btn scrollto">Contact US</a>
+            <nav class="navbar">
+                <a href="/login" class="get-started-btn scrollto py-2 px-4">Login</a>
+                <a href="/register" class="scrollto">Register</a>
+            </nav>
 
         </div>
     </header><!-- End Header -->

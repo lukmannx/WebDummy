@@ -42,8 +42,8 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="row ">
-                    <div class="card ms-4" style="width: 15rem;">
+                <div class="row mt-4 me-1">
+                    <div class="card ms-4 mt-2" style="width: 15rem;">
                         <div class="dropdown mt-2">
                             <button class="btn bg-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"

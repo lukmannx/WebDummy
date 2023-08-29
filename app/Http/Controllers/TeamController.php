@@ -15,7 +15,7 @@ class TeamController extends Controller
     public function index()
     {
         $data = Team::all();
-        return view('dashboard.team', compact ('data'));
+        return view('dashboard.team.team', compact ('data'));
     }
 
     /**
@@ -36,13 +36,18 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        $data = Team::create($request->all());
-        if($request->hasFile('photo')){
-            $request->file('photo')->move('buktiizin/',$request->file('photo')->getClientOriginalName());
-            $data->photo = $request->file('photo')->getClientOriginalName();
-            $data->save();
-        }
-        return back();
+        $data = $request->all();
+
+        if ($request->hasFile('photo')) {
+            $destination_path = 'public/images';
+            $image = $request->file('photo');
+            $name = $image->getClientOriginalName();
+            $request->file('photo')->storeAs($destination_path, $name);
+            $data['photo'] = $name;
+        };
+        
+        Team::create($data);
+        return redirect('/team');
     }
 
     /**
@@ -76,7 +81,19 @@ class TeamController extends Controller
      */
     public function update(Request $request, Team $team)
     {
-        //
+        $item = Team::findOrFail($id);
+        $data = $request->all();
+
+        if ($request->hasFile('photo')) {
+            $destination_path = 'public/images';
+            $image = $request->file('photo');
+            $name = $image->getClientOriginalName();
+            $request->file('photo')->storeAs($destination_path, $name);
+            $data['photo'] = $name;
+        };
+
+        $item->update($data);
+        return redirect('/team');
     }
 
     /**
@@ -85,8 +102,10 @@ class TeamController extends Controller
      * @param  \App\Team  $team
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Team $team)
+    public function destroy($id)
     {
-        //
+        $data = Team::find($id);
+        $data->delete();
+        return back();
     }
 }

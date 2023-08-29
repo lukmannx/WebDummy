@@ -15,7 +15,7 @@ class BeritaController extends Controller
     public function index()
     {
         $data = Berita::all();
-        return view('dashboard.berita', compact ('data'));
+        return view('dashboard.news.berita', compact ('data'));
     }
 
     /**
@@ -65,7 +65,7 @@ class BeritaController extends Controller
     public function edit($id)
     {
         $data = Berita::find($id);
-        return view('dashboard.editberita', compact ('data'));
+        return view('dashboard.news.edit', compact ('data'));
     }
 
     /**

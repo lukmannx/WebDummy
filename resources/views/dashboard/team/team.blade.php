@@ -45,15 +45,15 @@
 
     </div>
     <div class="card shadow-lg mt-4">
-        @foreach ($data as $item)
         <div class="card-body ms-3">
         </div>
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
+                @foreach ($data as $item)
+                <div class="col-lg-3 card d-flex align-items-stretch">
                     <div class="member" data-aos="fade-up" data-aos-delay="200">
                         <div class="member-img">
-                            <div class="dropdown p-2">
+                            <div class="dropdown p-2 mt-2">
                                 <button class="btn bg-light" type="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -63,17 +63,21 @@
                                     </svg>
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <div class="row">
-                                        <a href="" class="btn w-75 ms-4 mt-3">
-                                            <li>Edit</li>
-                                        </a>
-                                        <button type="submit" class="btn w-75 ms-4">
-                                            <li>Hapus</li>
-                                        </button>
-                                    </div>
+                                    <form action="{{route('team.destroy', $item->id)}}" method="post">
+                                        @csrf
+                                        {{ method_field('DELETE') }}
+                                        <div class="row">
+                                            <a href="" class="btn w-75 ms-4 mt-3">
+                                                <li>Edit</li>
+                                            </a>
+                                            <button type="submit" class="btn w-75 ms-4">
+                                                <li>Hapus</li>
+                                            </button>
+                                        </div>
+                                    </form>
                                 </ul>
                             </div>
-                            <img src="{{URL::asset('/img/team/team-2.jpg')}}" class="img-fluid" alt="">
+                            <img src="{{ asset('storage/images') }}/{{ $item->photo }}" class="img-fluid" alt="">
                             <div class="social">
                                 <a href=""><i class="bi bi-twitter"></i></a>
                                 <a href=""><i class="bi bi-facebook"></i></a>
@@ -82,8 +86,8 @@
                             </div>
                         </div>
                         <div class="member-info shadow-lg p-3 mb-5 bg-body-tertiary rounded">
-                            <h4>Sarah Jhonson</h4>
-                            <span>Product Manager</span>
+                            <h4>{{$item->name}}</h4>
+                            <span>{{$item->jabatan}}</span>
                         </div>
                     </div>
                 </div>

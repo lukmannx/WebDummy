@@ -67,7 +67,7 @@
                                         @csrf
                                         {{ method_field('DELETE') }}
                                         <div class="row">
-                                            <a href="" class="btn w-75 ms-4 mt-3">
+                                            <a href="{{route('team.edit', $item->id)}}" class="btn w-75 ms-4 mt-3">
                                                 <li>Edit</li>
                                             </a>
                                             <button type="submit" class="btn w-75 ms-4">

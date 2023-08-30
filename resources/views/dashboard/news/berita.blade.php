@@ -4,7 +4,7 @@
 <div class="row px-0 mt-5">
     <div class="col-md-12">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col">
                 <div class="justify-content-center">
                     <label class="fs-4 text-white">Form Berita</label>
                     <div class="card">
@@ -46,12 +46,12 @@
                 </div>
             </div>
             @if(!$data->isEmpty())
-            <div class="col-md-8">
+            <div class="col-md-6">
                 <label class="fs-4 text-white">Berita</label>
                 <div class="card ">
                     <div class="row my-2 mx-2 gap-3">
                         @foreach($data as $item)
-                        <div class="card m-2 col-md-4 p-2 h-50 ms-4" style="width: 270px;">
+                        <div class="card ms-4 mt-2" style="width: 15rem;">
                             <div class="dropdown">
                                 <button class="btn bg-light" type="button" data-bs-toggle="dropdown"
                                     aria-expanded="false">
@@ -76,7 +76,7 @@
                                     </form>
                                 </ul>
                             </div>
-                            <img src="" alt="..." class="img-fluid card-img" style="height: 250px; object-fit: cover;">
+                            <img src="{{asset('/public/images/berita/'.$item->photo)}}" alt="..." class="card-img-top">
                             <div class="card-body p-3">
                                 <h5 class="card-title">{{$item->judul}}</h5>
                                 <div class="card-text pt-2">

@@ -250,10 +250,10 @@
 
         <!-- ======= Cta Section ======= -->
         <section id="cta" class="cta">
-            <div class="" data-aos="zoom-in">
+            <div class="h-50" data-aos="zoom-in">
 
                 <div>
-                    <h1><a href="index.html"><img src="{{asset('img/lugu.png')}}" alt=""><span></span></a></h1>
+                    <h1><a href=""><img src="{{asset('img/lugu.png')}}" alt=""><span></span></a></h1>
                 </div>
 
             </div>
@@ -277,14 +277,31 @@
                                 <p>makan</p>
                             </div>
                         </div>
-                        
-                        
+                        <div class="swiper-slide"> <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
+                            <div class="card-news">
+                                <h1>Seorang anak Meninggal</h1>
+                                <p>makan</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide"> <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
+                            <div class="card-news">
+                                <h1>Seorang anak Meninggal</h1>
+                                <p>makan</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide"> <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
+                            <div class="card-news">
+                                <h1>Seorang anak Meninggal</h1>
+                                <p>makan</p>
+                            </div>
+                        </div>
                     </div>
+                    
                     <div class="swiper-pagination"></div>
                 </div>
-                
 
-                </div>
+
+            </div>
 
 
         </section><!-- End Berita Section -->

@@ -267,6 +267,7 @@
                 <div class="section-title">
                     <h2>News</h2>
                     <p>Latest News</p>
+                    <a href="/detail">Semua Berita &raquo;</a>
                 </div>
 
                 <div class="swiper mySwiper">

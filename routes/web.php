@@ -49,3 +49,5 @@ Route::get('/home', function(){
     }
     return redirect('/user');
 });
+Route::view('/detail', 'detail');
+Route::view('/newss', 'news');

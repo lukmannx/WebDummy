@@ -10,8 +10,8 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{asset('img/lugu.png')}}" rel="icon">
-    <link href="{{asset('img/apple-touch-icon.png')}}" rel="apple-touch-icon>">
+    <link href="{{asset('/assets/img/lugu.png')}}" rel="icon">
+    <link href="{{asset('/assets/img/apple-touch-icon.png')}}" rel="apple-touch-icon>">
 
     <!-- Google Fonts -->
     <link
@@ -59,7 +59,7 @@
     <header id="header" class="fixed-top ">
         <div class="container d-flex align-items-center justify-content-lg-between">
 
-            <h1 class="logo me-auto me-lg-0"><a href="index.html"><img src="{{asset('img/lugu.png ')}}"
+            <h1 class="logo me-auto me-lg-0"><a href="index.html"><img src="{{asset('/assets/img/lugu.png')}}"
                         alt=""><span></span></a></h1>
 
             <nav id="navbar" class="navbar order-last order-lg-0">

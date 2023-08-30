@@ -12,6 +12,12 @@ class ProductController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $product = Product::all();
@@ -62,9 +68,10 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function edit(Product $product)
+    public function edit($id)
     {
-        //
+        $data = Product::find($id);
+        return view('dashboard.product.edit', compact ('data'));
     }
 
     /**
@@ -74,9 +81,16 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Product $product)
+    public function update(Request $request, $id)
     {
-        //
+        $data = Product::find($id);
+        $data->update($request->all());
+        if($request->hasFile('photo')){
+            $request->file('photo')->move('buktiizin/',$request->file('photo')->getClientOriginalName());
+            $data->photo = $request->file('photo')->getClientOriginalName();
+            $data->save();
+        }
+        return redirect('/product');
     }
 
     /**
@@ -85,8 +99,10 @@ class ProductController extends Controller
      * @param  \App\Product  $product
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Product $product)
+    public function destroy($id)
     {
-        //
+        $data = Product::find($id);
+        $data->delete();
+        return back();
     }
 }

@@ -12,6 +12,12 @@ class BeritaController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index()
     {
         $data = Berita::all();
@@ -36,13 +42,20 @@ class BeritaController extends Controller
      */
     public function store(Request $request)
     {
-        $data = Berita::create($request->all());
+        $input = $request->all();
         if($request->hasFile('photo')){
-            $request->file('photo')->move('buktiizin/',$request->file('photo')->getClientOriginalName());
-            $data->photo = $request->file('photo')->getClientOriginalName();
-            $data->save();
+            $destination_path = 'public/images/berita';
+            $image = $request->file('photo');
+            $image_name = $image->getClientOriginalName();
+            $path = $request->file('photo')->storeAs($destination_path, $image_name);
+            
+            $input['photo'] = $image_name;
         }
-        return back();
+
+        Berita::create($input);
+        session()->flash('success', 'Berhasil Menambahkan Berita');
+
+        return redirect('/berita');
     }
 
     /**

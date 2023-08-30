@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.app-edit')
 
 @section('content')
 
@@ -11,7 +11,6 @@
         <div class="col-md-6 mt-4">
             <h5>Contoh Form Group</h5>
 
-
             <div class="mt-4">
                 <img alt="..." class="card-img my-2 ms-2" style="max-width: 25rem;" id="imagePreview"
                     class="form-control">
@@ -22,7 +21,7 @@
             <div class="mt-4">
                 <label class="fs-4" for="nama">Judul Berita</label>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="judul" placeholder="Judul Berita" required>
+                    <input type="text" class="form-control"  value="{{$data->judul}}" name="judul" placeholder="Judul Berita" required>
                 </div>
             </div>
 
@@ -30,14 +29,14 @@
                 <label class="fs-4" for="nama">Deskripsi</label>
                 <div class="input-group mb-3">
                     <textarea name="deskripsi" rows="3" class="form-control" placeholder="deskripsi"
-                        required></textarea>
+                        required>{{$data->deskripsi}}</textarea>
                 </div>
             </div>
 
             <div class="mb-4">
                 <label class="fs-4" for="nama">Penulis</label>
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control" name="penulis" placeholder="penulis" required>
+                    <input type="text" class="form-control" value="{{$data->penulis}}" name="penulis" placeholder="penulis" required>
                 </div>
             </div>
 

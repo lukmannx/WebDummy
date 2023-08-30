@@ -250,10 +250,10 @@
 
         <!-- ======= Cta Section ======= -->
         <section id="cta" class="cta">
-            <div class="" data-aos="zoom-in">
+            <div class="h-50" data-aos="zoom-in">
 
                 <div>
-                    <h1><a href="index.html"><img src="{{asset('img/lugu.png')}}" alt=""><span></span></a></h1>
+                    <h1><a href=""><img src="{{asset('img/lugu.png')}}" alt=""><span></span></a></h1>
                 </div>
 
             </div>
@@ -269,19 +269,39 @@
                     <p>Latest News</p>
                 </div>
 
-                <div class="swiperr mySwiper">
+                <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
+                        <div class="swiper-slide"> <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
                             <div class="card-news">
                                 <h1>Seorang anak Meninggal</h1>
                                 <p>makan</p>
                             </div>
-
                         </div>
-
+                        <div class="swiper-slide"> <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
+                            <div class="card-news">
+                                <h1>Seorang anak Meninggal</h1>
+                                <p>makan</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide"> <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
+                            <div class="card-news">
+                                <h1>Seorang anak Meninggal</h1>
+                                <p>makan</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide"> <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
+                            <div class="card-news">
+                                <h1>Seorang anak Meninggal</h1>
+                                <p>makan</p>
+                            </div>
+                        </div>
                     </div>
+                    
+                    <div class="swiper-pagination"></div>
                 </div>
+
+
+            </div>
 
 
         </section><!-- End Berita Section -->
@@ -747,10 +767,13 @@
                         <h4>Our Services</h4>
                         <ul>
                             <li><i class="bx bx-chevron-right"></i> <a href="#services">Security Consultation</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Network Security Management</a></li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#services">>Security Training and Education</a>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Network Security Management</a>
                             </li>
-                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Security Maintenance and Updates</a>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">>Security Training and
+                                    Education</a>
+                            </li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#services">Security Maintenance and
+                                    Updates</a>
                             </li>
                             <li><i class="bx bx-chevron-right"></i> <a href="#services">Threat Analysis and Security
                                     Intelligence</a></li>
@@ -812,6 +835,21 @@
         })
 
     </script>
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+        });
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
 
     </main>
     <!-- End #main -->

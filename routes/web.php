@@ -36,3 +36,5 @@ Route::get('/home', 'ProductController@index')->name('home');
 
 Route::view('/contoh', 'login');
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+Route::view('/detail', 'detail');
+Route::view('/newss', 'news');

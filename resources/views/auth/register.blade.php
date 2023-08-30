@@ -49,10 +49,10 @@
                                     </span>
                                     @enderror
                                 </div>
-                                {{-- <div class="mb-3">
+                                <div class="mb-3">
                                     <input id="password-confirm" type="password" placeholder="Confirm Password" class="form-control form-control-lg"
-                                    required autocomplete="new-password">
-                                </div> --}}
+                                    required autocomplete="new-password" name="password_confirmation">
+                                </div>
                                 <div class="form-check form-switch">
                                     <input class="form-check-input" type="checkbox" id="rememberMe">
                                     <label class="form-check-label" for="rememberMe">Remember me</label>

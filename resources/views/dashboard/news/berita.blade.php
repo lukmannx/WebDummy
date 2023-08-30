@@ -10,7 +10,7 @@
                     <div class="card">
                         <div class="card-body">
                             <p class="card-title">Isi Berita</p>
-                            <form action="{{route('berita.store')}}" method="post">
+                            <form action="{{route('berita.store')}}" method="post" enctype="multipart/form-data">
                                 @csrf
                                 <div class="col-md-10 ms-3 mt-4 me-2">
                                     <img alt="..." class="card-img my-2 ms-2 mb-3" style="max-width: 24rem;"
@@ -21,26 +21,31 @@
                                 <div class="col-md-10 ms-3 mt-4 me-2">
                                     <label for="nama">Judul Berita</label>
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" name="judul" placeholder="Judul Berita" required>
+                                        <input type="text" class="form-control" name="judul" placeholder="Judul Berita"
+                                            required>
                                     </div>
                                 </div>
                                 <div class="col-md-10 ms-3">
                                     <label for="nama">Deskripsi</label>
                                     <div class="input-group mb-3">
-                                        <textarea name="deskripsi" rows="3" class="form-control"
-                                            placeholder="deskripsi" required></textarea>
+                                        <textarea name="deskripsi" rows="3" class="form-control" placeholder="deskripsi"
+                                            required></textarea>
                                     </div>
                                 </div>
                                 <div class="col-md-10 ms-3 mb-4 me-2">
                                     <label for="nama">Penulis</label>
                                     <div class="input-group mb-3">
-                                        <input type="text" class="form-control" name="penulis" placeholder="penulis" required>
+                                        <input type="text" class="form-control" name="penulis" placeholder="penulis"
+                                            required>
                                     </div>
                                 </div>
                                 <div class="col ms-3">
                                     <button type="submit" class="btn btn-primary float-right">Buat</button>
                                 </div>
                             </form>
+                            @error('photo')
+                            <div class="error text-danger ms-3">{{ $message }}</div>
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -76,7 +81,7 @@
                                     </form>
                                 </ul>
                             </div>
-                            <img src="{{asset('/public/images/berita/'.$item->photo)}}" alt="..." class="card-img-top">
+                            <img src="{{asset('/storage/images/berita/'.$item->photo)}}" alt="..." class="card-img-top">
                             <div class="card-body p-3">
                                 <h5 class="card-title">{{$item->judul}}</h5>
                                 <div class="card-text pt-2">

@@ -42,7 +42,12 @@ class BeritaController extends Controller
      */
     public function store(Request $request)
     {
-        $input = $request->all();
+        $input = $request->validate([
+            'judul' => 'required',
+            'deskripsi' => 'required',
+            'penulis' => 'required',
+            'photo' => 'required|max:2048',
+        ]);
         if($request->hasFile('photo')){
             $destination_path = 'public/images/berita';
             $image = $request->file('photo');
@@ -51,10 +56,10 @@ class BeritaController extends Controller
             
             $input['photo'] = $image_name;
         }
-
+        
         Berita::create($input);
         session()->flash('success', 'Berhasil Menambahkan Berita');
-
+        
         return redirect('/berita');
     }
 

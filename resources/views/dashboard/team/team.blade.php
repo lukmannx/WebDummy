@@ -11,7 +11,7 @@
             <div class="row">
                 <div class="card-body">
                     <p class="text-uppercase text-sm">Input Nama</p>
-                    <form action="{{route('team.store')}}" method="post">
+                    <form action="{{route('team.store')}}" method="post" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-md-6">

@@ -9,7 +9,7 @@
         </div>
         <div class="row">
             <div class="col card ms-5 mt-4 me-4 mb-5">
-                <form action="{{route('product.store')}}" method="post">
+                <form action="{{route('product.store')}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="col-md-10">
                         <div class="form-group">

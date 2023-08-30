@@ -10,37 +10,40 @@
     <div class="row">
         <div class="col-md-6 mt-4">
             <h5>Contoh Form Group</h5>
-
-            <div class="mt-4">
-                <img alt="..." class="card-img my-2 ms-2" style="max-width: 25rem;" id="imagePreview"
-                    class="form-control">
-                <label for="formFile" class="form-label fs-4">Default file input example</label>
-                <input class="form-control" type="file" name="photo" id="image-input" required>
-            </div>
-
-            <div class="mt-4">
-                <label class="fs-4" for="nama">Judul Berita</label>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control"  value="{{$data->judul}}" name="judul" placeholder="Judul Berita" required>
+            <form action="{{route('berita.update', $data->id)}}" method="post" enctype="multipart/form-data">
+                @csrf
+                @method('put')
+                <div class="mt-4">
+                    <img alt="..." class="card-img my-2 ms-2" style="max-width: 25rem;" id="imagePreview"
+                        class="form-control">
+                    <label for="formFile" class="form-label fs-4">Default file input example</label>
+                    <input class="form-control" type="file" name="photo" id="image-input" required>
                 </div>
-            </div>
-
-            <div class="">
-                <label class="fs-4" for="nama">Deskripsi</label>
-                <div class="input-group mb-3">
-                    <textarea name="deskripsi" rows="3" class="form-control" placeholder="deskripsi"
-                        required>{{$data->deskripsi}}</textarea>
+    
+                <div class="mt-4">
+                    <label class="fs-4" for="nama">Judul Berita</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control"  value="{{$data->judul}}" name="judul" placeholder="Judul Berita" required>
+                    </div>
                 </div>
-            </div>
-
-            <div class="mb-4">
-                <label class="fs-4" for="nama">Penulis</label>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" value="{{$data->penulis}}" name="penulis" placeholder="penulis" required>
+    
+                <div class="">
+                    <label class="fs-4" for="nama">Deskripsi</label>
+                    <div class="input-group mb-3">
+                        <textarea name="deskripsi" rows="3" class="form-control" placeholder="deskripsi"
+                            required>{{$data->deskripsi}}</textarea>
+                    </div>
                 </div>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Submit</button>
+    
+                <div class="mb-4">
+                    <label class="fs-4" for="nama">Penulis</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" value="{{$data->penulis}}" name="penulis" placeholder="penulis" required>
+                    </div>
+                </div>
+    
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
 
         </div>
         <div class="col-md-6 justify-content-center align-items-center d-flex">

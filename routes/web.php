@@ -23,16 +23,29 @@ Route::get('/', function () {
 });
 
 Route::view('template', 'layouts.dashboard');
-Route::resource('product', 'ProductController');
-Route::resource('team', 'TeamController');
-Route::resource('berita', 'BeritaController');
+
 
 // Admin Dashboard
 Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
-Route::get('/home', 'ProductController@index')->name('home');
-
 Route::view('/contoh', 'login');
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+Route::group(['middleware'=>['isAdmin']], function(){
+    Route::resource('product', 'ProductController');
+    Route::resource('team', 'TeamController');
+    Route::resource('berita', 'BeritaController');
+});
+
+Route::group(['middleware'=>['isUser']], function(){
+    Route::get('/user', 'ProductController@index')->name('home');
+});
+
+Route::get('/home', function(){
+    if(auth()->user()->is_admin){
+       return redirect('/product');
+    }
+    return redirect('/user');
+});

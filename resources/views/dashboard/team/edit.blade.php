@@ -10,29 +10,32 @@
     <div class="row">
         <div class="col-md-6 mt-4">
             <h5>Contoh Form Group</h5>
-
-            <div class="mt-4">
-                <img alt="..." class="card-img my-2 ms-2" style="max-width: 25rem;" id="imagePreview"
-                    class="form-control">
-                <label for="formFile" class="form-label fs-4">Default file input example</label>
-                <input class="form-control" type="file" name="photo" id="image-input" required>
-            </div>
-
-            <div class="mt-4">
-                <label class="fs-4" for="nama">Nama</label>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control"  value="{{$data->name}}" name="name" placeholder="Nama" required>
+            <form action="{{route('team.update', $data->id)}}" method="post" enctype="multipart/form-data">
+                @csrf
+                @method('put')
+                <div class="mt-4">
+                    <img alt="..." class="card-img my-2 ms-2" style="max-width: 25rem;" id="imagePreview"
+                        class="form-control">
+                    <label for="formFile" class="form-label fs-4">Default file input example</label>
+                    <input class="form-control" type="file" name="photo" id="image-input" required>
                 </div>
-            </div>
-            
-            <div class="mt-4">
-                <label class="fs-4" for="nama">Jabatan</label>
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control"  value="{{$data->jabatan}}" name="jabatan" placeholder="Jabatan" required>
+    
+                <div class="mt-4">
+                    <label class="fs-4" for="nama">Nama</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control"  value="{{$data->name}}" name="name" placeholder="Nama" required>
+                    </div>
                 </div>
-            </div>
-
-            <button type="submit" class="btn btn-primary">Submit</button>
+                
+                <div class="mt-4">
+                    <label class="fs-4" for="nama">Jabatan</label>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control"  value="{{$data->jabatan}}" name="jabatan" placeholder="Jabatan" required>
+                    </div>
+                </div>
+    
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
 
         </div>
         <div class="col-md-6 justify-content-center align-items-center d-flex">

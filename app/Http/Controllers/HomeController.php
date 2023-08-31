@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Berita;
 use App\Product;
+use App\Team;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,10 +14,6 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     /**
      * Show the application dashboard.
@@ -27,6 +24,7 @@ class HomeController extends Controller
     {
         $berita = Berita::all();
         $product = Product::all();
-        return view('main', compact('berita', 'product'));
+        $team = Team::all();
+        return view('main', compact('berita', 'product', 'team'));
     }
 }

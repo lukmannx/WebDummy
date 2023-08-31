@@ -1553,12 +1553,14 @@ section {
 
 .swiper {
     width: 100%;
+    height: 20rem;
     margin-top: 75px;
 }
 
 .swiper-slide {
     text-align: center;
     font-size: 18px;
+    background: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1573,18 +1575,19 @@ section {
 
 .swiper-slide {
     width: 32%;
-    height: 80%;
+    height: 100%;
 }
 
 .card-news {
     content: '';
-    background-color: rgba(0, 0, 0, .7);
+    background-color: rgba(0, 0, 0, .5);
     position: absolute;
     z-index: 0;
-    inset: 65% 0 0 0;
+    inset: 55% 0 0 0;
 }
 
-.card-news  p{
+
+.card-news p {
     color: white;
     position: absolute;
     left: 50%;
@@ -1595,8 +1598,8 @@ section {
     align-items: center;
     display: flex;
     font-size: 15px;
-    margin-top: 10px;
-
+    margin-top: 5px;
+    font-weight: bold;
 }
 
 .card-news h1 {
@@ -1609,6 +1612,7 @@ section {
     justify-content: center;
     align-items: center;
     display: flex;
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 5px;
+    font-weight: bold;
 }

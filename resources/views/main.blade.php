@@ -53,6 +53,16 @@
   ======================================================== -->
 </head>
 
+<style>
+    .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+</style>
+
 <body>
 
     <!-- ======= Header ======= -->
@@ -260,21 +270,65 @@
 
 
         <section id="Berita" class="Berita">
-            <div class="container mt-5" data-aos="fade-up">
+            <div class="container mt-2" data-aos="fade-up">
 
                 <div class="section-title">
                     <h2>News</h2>
                     <p>Latest News</p>
-                    <a href="/detail">Semua Berita &raquo;</a>
+                    <a href="/newss">Semua Berita &raquo;</a>
                 </div>
+
 
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"> <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" class="img-fluid" alt="">
-                            <div class="card-news">
+
+                        <div class="swiper-slide border-2 border-black border shadow mb-5 bg-body-tertiary rounded">
+                            <img class="image-newss" src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="..."
+                                class="card-img img-fluid img-thumbnail">
+                            <a class="card-news" href="/berita/detail">
                                 <h1>Seorang anak Meninggal</h1>
                                 <p>makan</p>
-                            </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide border-2 border-black border shadow mb-5 bg-body-tertiary rounded">
+                            <img class="image-newss" src="{{URL::asset('/img/portfolio/portfolio-2.jpg')}}" alt="..."
+                                class="card-img img-fluid img-thumbnail">
+                            <a class="card-news" href="/berita/detail">
+                                <h1>Seorang anak Meninggal</h1>
+                                <p>makan</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide border-2 border-black border shadow mb-5 bg-body-tertiary rounded">
+                            <img class="image-newss" src="{{URL::asset('/img/portfolio/portfolio-3.jpg')}}" alt="..."
+                                class="card-img img-fluid img-thumbnail">
+                            <a class="card-news" href="/berita/detail">
+                                <h1>Seorang anak Meninggal</h1>
+                                <p>makan</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide border-2 border-black border shadow mb-5 bg-body-tertiary rounded">
+                            <img class="image-newss" src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="..."
+                                class="card-img img-fluid img-thumbnail">
+                            <a class="card-news" href="/detail">
+                                <h1>Seorang anak Meninggal</h1>
+                                <p>makan</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide border-2 border-black border shadow mb-5 bg-body-tertiary rounded">
+                            <img class="image-newss" src="{{URL::asset('/img/portfolio/portfolio-2.jpg')}}" alt="..."
+                                class="card-img img-fluid img-thumbnail">
+                            <a class="card-news" href="/detail">
+                                <h1>Seorang anak Meninggal</h1>
+                                <p>makan</p>
+                            </a>
+                        </div>
+                        <div class="swiper-slide border-2 border-black border shadow mb-5 bg-body-tertiary rounded">
+                            <img class="image-newss" src="{{URL::asset('/img/portfolio/portfolio-3.jpg')}}" alt="..."
+                                class="card-img img-fluid img-thumbnail">
+                            <a class="card-news" href="/berita/detail">
+                                <h1>Seorang anak Meninggal</h1>
+                                <p>makan</p>
+                            </a>
                         </div>
                     </div>
 

@@ -117,8 +117,7 @@
 
                     <div class="news-block">
 
-                        <img
-                            src="{{asset('/storage/images/berita/'.$item->photo)}}">
+                        <img src="{{asset('/storage/images/berita/'.$item->photo)}}">
 
                         <h3 class="fw-bold mb-4">{{$data->judul}}</h3>
                         <p class="fs-4">{{$data->deskripsi}}</p>

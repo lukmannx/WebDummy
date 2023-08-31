@@ -260,7 +260,7 @@
 
 
         <section id="Berita" class="Berita">
-            <div class="container" data-aos="fade-up">
+            <div class="container mt-5" data-aos="fade-up">
 
                 <div class="section-title">
                     <h2>News</h2>
@@ -270,18 +270,14 @@
 
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        @foreach ($berita as $item)    
-                        <a href="{{route('berita.show', $item->id)}}">
-                            <div class="swiper-slide"> <img class="img-thumbnail" src="{{asset('/storage/images/berita/'.$item->photo)}}" alt="">
-                                <div class="card-news">
-                                    <h1>{{$item->judul}}</h1>
-                                    <p>{{$item->deskripsi}}</p>
-                                </div>
+                        <div class="swiper-slide"> <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" class="img-fluid" alt="">
+                            <div class="card-news">
+                                <h1>Seorang anak Meninggal</h1>
+                                <p>makan</p>
                             </div>
-                        </a>
-                        @endforeach
+                        </div>
                     </div>
-                    
+
                     <div class="swiper-pagination"></div>
                 </div>
 
@@ -312,7 +308,7 @@
                 </div>
 
                 <div class="row portfolio-container mt-5" data-aos="fade-up" data-aos-delay="200">
-                    @foreach ($product as $item)    
+                    @foreach ($product as $item)
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
                             <img src="{{asset('/storage/images/product/'.$item->photo)}}" class="img-fluid" alt="">

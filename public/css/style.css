@@ -1616,3 +1616,13 @@ section {
     margin-top: 5px;
     font-weight: bold;
 }
+
+.img-profile {
+  height: 2rem;
+  width: 2rem;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+  }
+

@@ -38,7 +38,7 @@ Route::group(['middleware'=>['isAdmin']], function(){
 });
 
 Route::group(['middleware'=>['isUser']], function(){
-    Route::resource('/user', 'ProductController');
+    Route::get('/user', 'HomeController@user');
 });
 
 Route::get('/home', function(){

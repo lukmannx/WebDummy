@@ -76,25 +76,30 @@
             <!-- .navbar -->
 
             <nav class="navbar">
-                <div class="dropdown">
-                    <a class="btn dropdown-toggle px-2 py-3 me-4" href="#" role="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class='bx bxs-user'></i>
-                    </a>
 
-                    <ul class="dropdown-menu">
-                        <li><a class="nav-link " href="/logout">
-                                <div class="text-center">
-                                    <span class="nav-link-text text-black">Profil</span>
-                                </div>
-                            </a></li>
-                        <li><a class="nav-link " href="/logout">
-                                <div class="text-center">
-                                    <span class="nav-link-text text-black">Logout</span>
-                                </div>
-                            </a></li>
-                    </ul>
-                </div>
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <img class="img-profile rounded-circle"
+                                    src="{{asset('/assets/img/undraw_profile.svg')}}">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <ul class="dropdown-menu shadow animated--grow-in"
+                                aria-labelledby="userDropdown" style="  list-style-type: none;
+                                ">
+                                <li style="  list-style-type: none;
+                                ">
+                                    <a class="dropdown-item" href="/logout" data-toggle="modal" data-target="#logoutModal">
+                                        <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                        Logout
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+            
             </nav>
 
         </div>

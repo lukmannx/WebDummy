@@ -17,20 +17,23 @@
                             <div class="col-md-6">
                                 <div class="form-group mt-3">
                                     <label for="example-text-input" class="form-control-label">Nama</label>
-                                    <input class="form-control bg-white" type="text" name="name">
+                                    <input class="form-control bg-white" type="text" name="name" required>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <p class="custom-file-label"></p>
-                                    <label for="formFile" class="form-label">Default file input</label>
-                                    <input class="form-control" type="file" name="photo" id="image-input">
+                                    <label for="formFile" class="form-label">Input image</label>
+                                    <input class="form-control" type="file" name="photo" id="image-input" required>
+                                    <div class="form-text">
+                                        Maximum file upload 2MB
+                                      </div>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="example-text-input" class="form-control-label">Jabatan</label>
-                                    <input class="form-control bg-white" type="text" name="jabatan">
+                                    <input class="form-control bg-white" type="text" name="jabatan" required>
                                 </div>
                             </div>
                             <div class="justify-content-start form-group mt-3">
@@ -38,6 +41,9 @@
                             </div>
                         </div>
                     </form>
+                    @error('photo')
+                    <div class="error text-danger ms-3">{{ $message }}</div>
+                    @enderror
                     <hr class="horizontal dark">
                 </div>
             </div>
@@ -77,7 +83,7 @@
                                     </form>
                                 </ul>
                             </div>
-                            <img src="{{ asset('storage/images') }}/{{ $item->photo }}" class="img-fluid" alt="">
+                            <img src="{{asset('/storage/images/team/'.$item->photo)}}" class="img-fluid" alt="">
                             <div class="social">
                                 <a href=""><i class="bi bi-twitter"></i></a>
                                 <a href=""><i class="bi bi-facebook"></i></a>

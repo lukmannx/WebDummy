@@ -15,8 +15,11 @@
                                 <div class="col-md-10 ms-3 mt-4 me-2">
                                     <img alt="..." class="card-img my-2 ms-2 mb-3" style="max-width: 24rem;"
                                         id="imagePreview" class="form-control">
-                                    <p class="custom-file-label"></p>
+                                    <label for="formFile" class="form-label">Input image</label>
                                     <input class="form-control" type="file" name="photo" id="image-input" required>
+                                    <div class="form-text">
+                                        Maximum file upload 2MB
+                                      </div>
                                 </div>
                                 <div class="col-md-10 ms-3 mt-4 me-2">
                                     <label for="nama">Judul Berita</label>

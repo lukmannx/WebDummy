@@ -76,8 +76,25 @@
             <!-- .navbar -->
 
             <nav class="navbar">
-                <a href="/login" class="get-started-btn scrollto py-2 px-4">Login</a>
-                <a href="/register" class="scrollto">Register</a>
+                <div class="dropdown">
+                    <a class="btn dropdown-toggle px-2 py-3 me-4" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class='bx bxs-user'></i>
+                    </a>
+
+                    <ul class="dropdown-menu">
+                        <li><a class="nav-link " href="/logout">
+                                <div class="text-center">
+                                    <span class="nav-link-text text-black">Profil</span>
+                                </div>
+                            </a></li>
+                        <li><a class="nav-link " href="/logout">
+                                <div class="text-center">
+                                    <span class="nav-link-text text-black">Logout</span>
+                                </div>
+                            </a></li>
+                    </ul>
+                </div>
             </nav>
 
         </div>
@@ -135,6 +152,8 @@
 
             </div>
         </section><!-- End About Section -->
+
+
 
         <!-- ======= Features Section ======= -->
         <section id="features" class="features mt-5">
@@ -270,7 +289,25 @@
 
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"> <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" class="img-fluid" alt="">
+                        <div class="swiper-slide"> <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
+                            <div class="card-news">
+                                <h1>Seorang anak Meninggal</h1>
+                                <p>makan</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide"> <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
+                            <div class="card-news">
+                                <h1>Seorang anak Meninggal</h1>
+                                <p>makan</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide"> <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
+                            <div class="card-news">
+                                <h1>Seorang anak Meninggal</h1>
+                                <p>makan</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide"> <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="">
                             <div class="card-news">
                                 <h1>Seorang anak Meninggal</h1>
                                 <p>makan</p>
@@ -308,15 +345,15 @@
                 </div>
 
                 <div class="row portfolio-container mt-5" data-aos="fade-up" data-aos-delay="200">
-                    @foreach ($product as $item)
+
                     <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                         <div class="portfolio-wrap">
-                            <img src="{{asset('/storage/images/product/'.$item->photo)}}" class="img-fluid" alt="">
+                            <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" class="img-fluid" alt="">
                             <div class="portfolio-info">
-                                <h4>{{$item->name}}</h4>
-                                <p>{{$item->description}}</p>
+                                <h4>App 1</h4>
+                                <p>App</p>
                                 <div class="portfolio-links">
-                                    <a href="{{asset('/storage/images/product/'.$item->photo)}}"
+                                    <a href="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}"
                                         data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i
                                             class="bx bx-plus"></i></a>
                                     <a href="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" title="More Details"><i
@@ -325,7 +362,86 @@
                             </div>
                         </div>
                     </div>
-                    @endforeach
+
+                    <div class="col-lg-4 col-md-3 portfolio-item filter-web">
+                        <div class="portfolio-wrap">
+                            <img src="{{URL::asset('/img/portfolio/portfolio-2.jpg')}}" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>Web 3</h4>
+                                <p>Web</p>
+                                <div class="portfolio-links">
+                                    <a href="{{URL::asset('/img/portfolio/portfolio-2.jpg')}}"
+                                        data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i
+                                            class="bx bx-plus"></i></a>
+                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-wrap">
+                            <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>App 1</h4>
+                                <p>App</p>
+                                <div class="portfolio-links">
+                                    <a href="{{URL::asset('/img/portfolio/portfolio-3.jpg')}}"
+                                        data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i
+                                            class="bx bx-plus"></i></a>
+                                    <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-wrap">
+                            <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>App 1</h4>
+                                <p>App</p>
+                                <div class="portfolio-links">
+                                    <a href="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}"
+                                        data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i
+                                            class="bx bx-plus"></i></a>
+                                    <a href="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" title="More Details"><i
+                                            class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-wrap">
+                            <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>App 1</h4>
+                                <p>App</p>
+                                <div class="portfolio-links">
+                                    <a href="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}"
+                                        data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i
+                                            class="bx bx-plus"></i></a>
+                                    <a href="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" title="More Details"><i
+                                            class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+                        <div class="portfolio-wrap">
+                            <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" class="img-fluid" alt="">
+                            <div class="portfolio-info">
+                                <h4>App 1</h4>
+                                <p>App</p>
+                                <div class="portfolio-links">
+                                    <a href="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}"
+                                        data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i
+                                            class="bx bx-plus"></i></a>
+                                    <a href="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" title="More Details"><i
+                                            class="bx bx-link"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -480,20 +596,17 @@
 
                 <div class="row">
 
-                    @foreach ($team as $item)
-                        
-                    @endforeach
                     <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                         <div class="member" data-aos="fade-up" data-aos-delay="100">
                             <div class="member-img">
-                                <img src="{{asset('/storage/images/team/'.$item->photo)}}" class="img-fluid" alt="">
+                                <img src="{{URL::asset('/img/team/team-1.jpg')}}" class="img-fluid" alt="">
                                 <div class="social">
 
                                 </div>
                             </div>
                             <div class="member-info">
-                                <h4>{{$item->name}}</h4>
-                                <span>{{$item->jabatan}}</span>
+                                <h4>Walter White</h4>
+                                <span>Chief Executive Officer</span>
                             </div>
                         </div>
                     </div>

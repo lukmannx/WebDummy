@@ -49,3 +49,4 @@ Route::get('/home', function(){
 });
 
 Route::view('/newss', 'news');
+Route::view('/guest', 'guest');

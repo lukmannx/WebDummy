@@ -27,4 +27,9 @@ class HomeController extends Controller
         $team = Team::all();
         return view('main', compact('berita', 'product', 'team'));
     }
+
+    public function user()
+    {
+        return view('user');
+    }
 }

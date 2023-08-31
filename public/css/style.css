@@ -1612,3 +1612,13 @@ section {
     font-size: 20px;
     margin-top: 5px;
 }
+
+.img-profile {
+  height: 2rem;
+  width: 2rem;
+}
+
+.rounded-circle {
+    border-radius: 50% !important;
+  }
+

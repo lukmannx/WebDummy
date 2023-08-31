@@ -16,8 +16,11 @@
                             <img src="" alt="..." class="card-img ms-2" style="max-width: 24rem;" id="imagePreview"
                                 class="form-control">
                             <p class="custom-file-label"></p>
-                            <label for="formFile" class="form-label">Default file input example</label>
+                            <label for="formFile" class="form-label">Input image</label>
                             <input class="form-control" type="file" required name="photo" id="image-input">
+                            <div class="form-text">
+                                Maximum file upload 2MB
+                              </div>
                         </div>
                     </div>
                     <div class="col-md-10">
@@ -45,6 +48,9 @@
                         <button type="submit" class="btn btn-primary float-right">Buat</button>
                     </div>
                 </form>
+                @error('photo')
+                <div class="error text-danger ms-3">{{ $message }}</div>
+                @enderror
             </div>
             <div class="col-md-6">
                 <div class="row mt-4 me-1">
@@ -73,7 +79,7 @@
                                 </form>
                             </ul>
                         </div>
-                        <img src="{{URL::asset('/img/team/team-2.jpg')}}" class="card-img-top" alt="...">
+                        <img src="{{asset('/storage/images/product/'.$item->photo)}}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <p class="card-text text-start">{{$item->name}}</p>
                             <p class="card-text text-start">{{$item->description}}</p>

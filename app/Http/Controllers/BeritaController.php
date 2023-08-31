@@ -71,7 +71,8 @@ class BeritaController extends Controller
      */
     public function show(Berita $berita)
     {
-        //
+        $data = Berita::find('id');
+        return view('detail', compact('data'));
     }
 
     /**
@@ -95,13 +96,25 @@ class BeritaController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = Berita::find($id);
-        $data->update($request->all());
+        $input = Berita::find($id);
+        $input = $request->validate([
+            'judul' => 'required',
+            'deskripsi' => 'required',
+            'penulis' => 'required',
+            'photo' => 'required|max:2048',
+        ]);
+
         if($request->hasFile('photo')){
-            $request->file('photo')->move('buktiizin/',$request->file('photo')->getClientOriginalName());
-            $data->photo = $request->file('photo')->getClientOriginalName();
-            $data->save();
+            $destination_path = 'public/images/berita';
+            $image = $request->file('photo');
+            $image_name = $image->getClientOriginalName();
+            $path = $request->file('photo')->storeAs($destination_path, $image_name);
+            
+            $input['photo'] = $image_name;
         }
+        Berita::create($input);
+        session()->flash('success', 'Berhasil Mengedit Berita');
+        
         return redirect('/berita');
     }
 

@@ -42,12 +42,24 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        $product = Product::create($request->all());
+        $input = $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'kategori' => 'required',
+            'photo' => 'required|max:2048',
+        ]);
         if($request->hasFile('photo')){
-            $request->file('photo')->move('buktiizin/',$request->file('photo')->getClientOriginalName());
-            $product->photo = $request->file('photo')->getClientOriginalName();
-            $product->save();
+            $destination_path = 'public/images/product';
+            $image = $request->file('photo');
+            $image_name = $image->getClientOriginalName();
+            $path = $request->file('photo')->storeAs($destination_path, $image_name);
+            
+            $input['photo'] = $image_name;
         }
+        
+        Product::create($input);
+        session()->flash('success', 'Berhasil Menambahkan Product');
+        
         return back();
     }
 
@@ -83,13 +95,24 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = Product::find($id);
-        $data->update($request->all());
+        $input = $request->validate([
+            'name' => 'required',
+            'description' => 'required',
+            'kategori' => 'required',
+            'photo' => 'required|max:2048',
+        ]);
         if($request->hasFile('photo')){
-            $request->file('photo')->move('buktiizin/',$request->file('photo')->getClientOriginalName());
-            $data->photo = $request->file('photo')->getClientOriginalName();
-            $data->save();
+            $destination_path = 'public/images/product';
+            $image = $request->file('photo');
+            $image_name = $image->getClientOriginalName();
+            $path = $request->file('photo')->storeAs($destination_path, $image_name);
+            
+            $input['photo'] = $image_name;
         }
+        
+        Product::create($input);
+        session()->flash('success', 'Berhasil Mengedit Product');
+        
         return redirect('/product');
     }
 

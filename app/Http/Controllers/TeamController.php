@@ -41,17 +41,23 @@ class TeamController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->all();
-
-        if ($request->hasFile('photo')) {
-            $destination_path = 'public/images';
+        $input = $request->validate([
+            'name' => 'required',
+            'jabatan' => 'required',
+            'photo' => 'required|max:2048',
+        ]);
+        if($request->hasFile('photo')){
+            $destination_path = 'public/images/team';
             $image = $request->file('photo');
-            $name = $image->getClientOriginalName();
-            $request->file('photo')->storeAs($destination_path, $name);
-            $data['photo'] = $name;
-        };
+            $image_name = $image->getClientOriginalName();
+            $path = $request->file('photo')->storeAs($destination_path, $image_name);
+            
+            $input['photo'] = $image_name;
+        }
         
-        Team::create($data);
+        Team::create($input);
+        session()->flash('success', 'Berhasil Menambah Team');
+        
         return redirect('/team');
     }
 
@@ -87,13 +93,23 @@ class TeamController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $data = Team::find($id);
-        $data->update($request->all());
+        $input = $request->validate([
+            'name' => 'required',
+            'jabatan' => 'required',
+            'photo' => 'required|max:2048',
+        ]);
         if($request->hasFile('photo')){
-            $request->file('photo')->move('buktiizin/',$request->file('photo')->getClientOriginalName());
-            $data->photo = $request->file('photo')->getClientOriginalName();
-            $data->save();
+            $destination_path = 'public/images/team';
+            $image = $request->file('photo');
+            $image_name = $image->getClientOriginalName();
+            $path = $request->file('photo')->storeAs($destination_path, $image_name);
+            
+            $input['photo'] = $image_name;
         }
+        
+        Team::create($input);
+        session()->flash('success', 'Berhasil Mengedit Team');
+        
         return redirect('/team');
     }
 

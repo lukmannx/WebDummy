@@ -18,9 +18,8 @@
 Auth::routes();
 
 // Main
-Route::get('/', function () {
-    return view('main');
-});
+Route::get('/', 'HomeController@index');
+
 
 Route::view('template', 'layouts.dashboard');
 
@@ -30,7 +29,6 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 });
 
-Route::view('/contoh', 'login');
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::group(['middleware'=>['isAdmin']], function(){
@@ -40,7 +38,7 @@ Route::group(['middleware'=>['isAdmin']], function(){
 });
 
 Route::group(['middleware'=>['isUser']], function(){
-    Route::get('/user', 'ProductController@index')->name('home');
+    Route::resource('/user', 'ProductController');
 });
 
 Route::get('/home', function(){
@@ -49,5 +47,5 @@ Route::get('/home', function(){
     }
     return redirect('/user');
 });
-Route::view('/detail', 'detail');
+
 Route::view('/newss', 'news');

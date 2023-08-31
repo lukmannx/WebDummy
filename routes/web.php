@@ -51,3 +51,4 @@ Route::get('/home', function(){
 });
 Route::view('/detail', 'detail');
 Route::view('/newss', 'news');
+Route::view('/guest', 'guest');

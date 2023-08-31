@@ -13,7 +13,7 @@ class IsAdmin
      * @param  \Closure  $next
      * @return mixed
      */
-    public function handle($request, Closure $next, $is_admin)
+    public function handle($request, Closure $next)
     {
         if(auth()->user()->is_admin){
             

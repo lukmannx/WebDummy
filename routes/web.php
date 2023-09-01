@@ -48,5 +48,5 @@ Route::get('/home', function(){
     return redirect('/user');
 });
 
-Route::view('/newss', 'news');
+Route::get('/news', 'HomeController@news');
 Route::view('/guest', 'guest');

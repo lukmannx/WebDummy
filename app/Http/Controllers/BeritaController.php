@@ -69,10 +69,10 @@ class BeritaController extends Controller
      * @param  \App\Berita  $berita
      * @return \Illuminate\Http\Response
      */
-    public function show(Berita $berita)
+    public function show($id)
     {
-        $data = Berita::find('id');
-        return view('detail', compact('data'));
+        $data = Berita::find($id);
+        return view('dashboard.news.detail', compact('data'));
     }
 
     /**

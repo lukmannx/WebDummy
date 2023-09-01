@@ -275,69 +275,34 @@
                 <div class="section-title">
                     <h2>News</h2>
                     <p>Latest News</p>
-                    <a href="/newss">Semua Berita &raquo;</a>
+                    @if( $berita->count() == 0 )
+                    <div class="pt-4">
+                        <h4>Maaf Belum Ada Data team</h4>
+                    </div>
+                    @else
+                    <a href="/news">Semua Berita &raquo;</a>
                 </div>
-
 
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
 
+                        @foreach ($berita as $item)
                         <div class="swiper-slide border-2 border-black border shadow mb-5 bg-body-tertiary rounded">
-                            <img class="image-newss" src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="..."
+                            <img class="image-newss" src="{{asset('/storage/images/berita/'.$item->photo)}}" alt="..."
                                 class="card-img img-fluid img-thumbnail">
-                            <a class="card-news" href="/berita/detail">
-                                <h1>Seorang anak Meninggal</h1>
-                                <p>makan</p>
+                            <a class="card-news" href="{{route('berita.show', $item->id)}}">
+                                <h1>{{$item->judul}}</h1>
+                                <p>{{$item->deskripsi}}</p>
                             </a>
                         </div>
-                        <div class="swiper-slide border-2 border-black border shadow mb-5 bg-body-tertiary rounded">
-                            <img class="image-newss" src="{{URL::asset('/img/portfolio/portfolio-2.jpg')}}" alt="..."
-                                class="card-img img-fluid img-thumbnail">
-                            <a class="card-news" href="/berita/detail">
-                                <h1>Seorang anak Meninggal</h1>
-                                <p>makan</p>
-                            </a>
-                        </div>
-                        <div class="swiper-slide border-2 border-black border shadow mb-5 bg-body-tertiary rounded">
-                            <img class="image-newss" src="{{URL::asset('/img/portfolio/portfolio-3.jpg')}}" alt="..."
-                                class="card-img img-fluid img-thumbnail">
-                            <a class="card-news" href="/berita/detail">
-                                <h1>Seorang anak Meninggal</h1>
-                                <p>makan</p>
-                            </a>
-                        </div>
-                        <div class="swiper-slide border-2 border-black border shadow mb-5 bg-body-tertiary rounded">
-                            <img class="image-newss" src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="..."
-                                class="card-img img-fluid img-thumbnail">
-                            <a class="card-news" href="/detail">
-                                <h1>Seorang anak Meninggal</h1>
-                                <p>makan</p>
-                            </a>
-                        </div>
-                        <div class="swiper-slide border-2 border-black border shadow mb-5 bg-body-tertiary rounded">
-                            <img class="image-newss" src="{{URL::asset('/img/portfolio/portfolio-2.jpg')}}" alt="..."
-                                class="card-img img-fluid img-thumbnail">
-                            <a class="card-news" href="/detail">
-                                <h1>Seorang anak Meninggal</h1>
-                                <p>makan</p>
-                            </a>
-                        </div>
-                        <div class="swiper-slide border-2 border-black border shadow mb-5 bg-body-tertiary rounded">
-                            <img class="image-newss" src="{{URL::asset('/img/portfolio/portfolio-3.jpg')}}" alt="..."
-                                class="card-img img-fluid img-thumbnail">
-                            <a class="card-news" href="/berita/detail">
-                                <h1>Seorang anak Meninggal</h1>
-                                <p>makan</p>
-                            </a>
-                        </div>
+                        @endforeach
+
                     </div>
 
                     <div class="swiper-pagination"></div>
                 </div>
-
-
+                @endif
             </div>
-
 
         </section><!-- End Berita Section -->
 
@@ -349,6 +314,12 @@
                     <h2>Product</h2>
                     <p>Check our Product</p>
                 </div>
+
+                @if( $product->count() == 0 )
+                <div class="pt-3">
+                    <h4>Maaf Belum Ada Product</h4>
+                </div>
+                @else
 
                 <div class="row" data-aos="fade-up" data-aos-delay="100">
                     <div class="col-lg-12 d-flex justify-content-center">
@@ -369,19 +340,18 @@
                             <div class="portfolio-info">
                                 <h4>{{$item->name}}</h4>
                                 <p>{{$item->description}}</p>
-                                <div class="portfolio-links">
-                                    <a href="{{asset('/storage/images/product/'.$item->photo)}}"
-                                        data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i
-                                            class="bx bx-plus"></i></a>
+                                {{-- <div class="portfolio-links">
+                                    <a href="" data-gallery="portfolioGallery" class="portfolio-lightbox"
+                                        title="App 1"><i class="bx bx-plus"></i></a>
                                     <a href="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" title="More Details"><i
                                             class="bx bx-link"></i></a>
-                                </div>
+                                </div> --}}
                             </div>
                         </div>
                     </div>
                     @endforeach
                 </div>
-
+                @endif
             </div>
         </section><!-- End Portfolio Section -->
 
@@ -532,12 +502,19 @@
                     <p>Check our Team</p>
                 </div>
 
+                @if( $team->count() == 0 )
+                <div class="pt-4">
+                    <h4>Maaf Belum Ada Data Team</h4>
+                </div>
+                @else
+
                 <div class="row">
                     @foreach ($team as $item)
                     <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                         <div class="member" data-aos="fade-up" data-aos-delay="100">
                             <div class="member-img">
-                                <img style="" src="{{asset('/storage/images/team/'.$item->photo)}}" class="img-fluid" alt="">
+                                <img style="" src="{{asset('/storage/images/team/'.$item->photo)}}" class="img-fluid"
+                                    alt="">
                                 <div class="social">
 
                                 </div>
@@ -550,52 +527,9 @@
                     </div>
                     @endforeach
 
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="200">
-                            <div class="member-img">
-                                <img src="{{URL::asset('/img/team/team-2.jpg')}}" class="img-fluid" alt="">
-                                <div class="social">
-
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Sarah Jhonson</h4>
-                                <span>Product Manager</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="300">
-                            <div class="member-img">
-                                <img src="{{URL::asset('/img/team/team-3.jpg')}}" class="img-fluid" alt="">
-                                <div class="social">
-
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>William Anderson</h4>
-                                <span>CTO</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="400">
-                            <div class="member-img">
-                                <img src="{{URL::asset('/img/team/team-4.jpg')}}" class="img-fluid" alt="">
-                                <div class="social">
-
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Amanda Jepson</h4>
-                                <span>Accountant</span>
-                            </div>
-                        </div>
-                    </div>
-
                 </div>
+
+                @endif
 
             </div>
         </section><!-- End Team Section -->
@@ -690,7 +624,7 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="footer-info ">
                             <h1 class="logo me-auto me-lg-0 mb-3"><a href="index.html"><img
-                                        src="{{asset('img/lugu.png')}}" alt=""
+                                        src="{{asset('assets/img/lugu.png')}}" alt=""
                                         style="width:25%; height:50px;"><span></span></a></h1>
                             <p>
                                 Palem Ganda Asri 2, Cluster AA Blok E No. 28, Karang Mulya, Karang Tengah,

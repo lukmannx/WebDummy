@@ -110,18 +110,17 @@
                 <div class="col-12">
 
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="/berita">back</a></li>
+                        <li class="breadcrumb-item"><a href="/">Back</a></li>
                         <li class="breadcrumb-item active" aria-current="page">Library</li>
                     </ol>
 
-
                     <div class="news-block">
 
-                        <img src="{{asset('/storage/images/berita/'.$item->photo)}}">
+                        <img src="{{asset('/storage/images/berita/'.$data->photo)}}">
 
                         <h3 class="fw-bold mb-4">{{$data->judul}}</h3>
                         <p class="fs-4">{{$data->deskripsi}}</p>
-                        <p>{{$data->creted_at}}</p>
+                        <p>{{$data->created_at}}</p>
 
                     </div>
                     <div class="clear">

@@ -277,7 +277,7 @@
                     <p>Latest News</p>
                     @if( $berita->count() == 0 )
                     <div class="pt-4">
-                        <h4>Maaf Belum Ada Data team</h4>
+                        <h4>Maaf Belum Ada Berita</h4>
                     </div>
                     @else
                     <a href="/news">Semua Berita &raquo;</a>

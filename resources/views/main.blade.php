@@ -496,7 +496,7 @@
         <!-- ======= Team Section ======= -->
         <section id="team" class="team">
             <div class="container" data-aos="fade-up">
-
+                
                 <div class="section-title">
                     <h2>Team</h2>
                     <p>Check our Team</p>

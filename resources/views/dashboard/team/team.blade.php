@@ -83,7 +83,7 @@
                                     </form>
                                 </ul>
                             </div>
-                            <img src="{{asset('/storage/images/team/'.$item->photo)}}" class="img-fluid" alt="">
+                            <img src="{{asset('/storage/images/team/'.$item->photo)}}" class="img-fluid" alt="" style="">
                             <div class="social">
                                 <a href=""><i class="bi bi-twitter"></i></a>
                                 <a href=""><i class="bi bi-facebook"></i></a>

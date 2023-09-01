@@ -1560,7 +1560,6 @@ section {
 .swiper-slide {
     text-align: center;
     font-size: 18px;
-    background: black;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1618,11 +1617,18 @@ section {
 }
 
 .img-profile {
-  height: 2rem;
-  width: 2rem;
+    height: 2rem;
+    width: 2rem;
 }
 
 .rounded-circle {
     border-radius: 50% !important;
-  }
+}
+
+.member-img img{
+    display: block;
+    width: 350px;
+    height: 300px;
+    object-fit: cover;
+}
 

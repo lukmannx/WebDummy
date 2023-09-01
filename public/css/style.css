@@ -1597,8 +1597,7 @@ section {
     align-items: center;
     display: flex;
     font-size: 15px;
-    margin-top: 5px;
-    font-weight: bold;
+    margin-top: 5px
 }
 
 .card-news h1 {

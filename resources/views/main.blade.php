@@ -293,7 +293,7 @@
                                 class="card-img img-fluid img-thumbnail">
                             <a class="card-news" href="{{route('berita.show', $item->id)}}">
                                 <h1>{{$item->judul}}</h1>
-                                <p>{{ implode(' ', array_slice(explode(' ', $item->deskripsi), 0, 5)) . (strlen($item->deskripsi) > 12 ? '...' : '') }}</p>
+                                <p>{{ implode(' ', array_slice(explode(' ', $item->deskripsi), 0, 7)) . (strlen($item->deskripsi) > 12 ? '...' : '') }}</p>
                             </a>
                         </div>
                         @endforeach

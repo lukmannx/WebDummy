@@ -9,101 +9,33 @@
     <div class="content container-fluid px-7">
 
         <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 gy-4 mt-4">
-            <div class="col p-2 ">
-                <a class="card border-1 rounded-0 shadow member-img" href="">
-                    <img src="{{URL::asset('/img/portfolio/portfolio-2.jpg')}}" alt="..." class= rounded-0" style="display: block; width: 450px; height: 350px; object-fit: cover;">
-                    <div class="card-body py-2 px-3">
-                        <h5 class="card-title mt-2">
-                            Lorem ipsum dolor sit amet.
-                        </h5>
-                        <div class="card-text pt-1">
-                            <p style="font-size: 15px;" class="text-muted">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quae.
-                            </p>
-                            <div class="d-flex justify-content-between pt-2">
-                                <p>
-                                    10.20.30
-                                </p>
-                                <p>
-                                    Lukman
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col p-2 ">
-                <a class="card border-1 rounded-0 shadow member-img" href="">
-                    <img src="{{URL::asset('/img/portfolio/portfolio-2.jpg')}}" alt="..." class= rounded-0" style="display: block; width: 450px; height: 350px; object-fit: cover;">
-                    <div class="card-body py-2 px-3">
-                        <h5 class="card-title mt-2">
-                            Lorem ipsum dolor sit amet.
-                        </h5>
-                        <div class="card-text pt-1">
-                            <p style="font-size: 15px;" class="text-muted">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quae.
-                            </p>
-                            <div class="d-flex justify-content-between pt-2">
-                                <p>
-                                    10.20.30
-                                </p>
-                                <p>
-                                    Lukman
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col p-2 ">
-                <a class="card border-1 rounded-0 shadow member-img" href="">
-                    <img src="{{URL::asset('/img/portfolio/portfolio-3.jpg')}}" alt="..." class= rounded-0" style="display: block; width: 450px; height: 350px; object-fit: cover;">
-                    <div class="card-body py-2 px-3">
-                        <h5 class="card-title mt-2">
-                            Lorem ipsum dolor sit amet.
-                        </h5>
-                        <div class="card-text pt-1">
-                            <p style="font-size: 15px;" class="text-muted">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quae.
-                            </p>
-                            <div class="d-flex justify-content-between pt-2">
-                                <p>
-                                    10.20.30
-                                </p>
-                                <p>
-                                    Lukman
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-            <div class="col p-2 ">
-                <a class="card border-1 rounded-0 shadow member-img" href="">
-                    <img src="{{URL::asset('/img/portfolio/portfolio-1.jpg')}}" alt="..." class= rounded-0" style="display: block; width: 450px; height: 350px; object-fit: cover;">
-                    <div class="card-body py-2 px-3">
-                        <h5 class="card-title mt-2">
-                            Lorem ipsum dolor sit amet.
-                        </h5>
-                        <div class="card-text pt-1">
-                            <p style="font-size: 15px;" class="text-muted">
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus, quae.
-                            </p>
-                            <div class="d-flex justify-content-between pt-2">
-                                <p>
-                                    10.20.30
-                                </p>
-                                <p>
-                                    Lukman
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
 
-
-
+            @foreach ($data as $item)
+            <div class="col p-2 ">
+                <a class="card border-1 rounded-0 shadow member-img" href="{{route('berita.show', $item->id)}}">
+                    <img src="{{asset('/storage/images/berita/'.$item->photo)}}" alt="..." class="rounded-0"
+                        style="display: block; width: 450px; height: 350px; object-fit: cover;">
+                    <div class="card-body py-2 px-3">
+                        <h5 class="card-title mt-2">
+                            {{$item->judul}}
+                        </h5>
+                        <div class="card-text pt-1">
+                            <p style="font-size: 15px;" class="text-muted">
+                                {{ implode(' ', array_slice(explode(' ', $item->deskripsi), 0, 7)) . (strlen($item->deskripsi) > 7 ? '...' : '') }}
+                            </p>
+                            <div class="d-flex justify-content-between pt-2">
+                                <p>
+                                    {{$item->created_at->diffForHumans()}}
+                                </p>
+                                <p>
+                                    {{$item->penulis}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            @endforeach
 
         </div>
 

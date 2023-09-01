@@ -282,6 +282,7 @@
                     @else
                     <a href="/news">Semua Berita &raquo;</a>
                 </div>
+                
 
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper">
@@ -292,7 +293,7 @@
                                 class="card-img img-fluid img-thumbnail">
                             <a class="card-news" href="{{route('berita.show', $item->id)}}">
                                 <h1>{{$item->judul}}</h1>
-                                <p>{{$item->deskripsi}}</p>
+                                <p>{{ implode(' ', array_slice(explode(' ', $item->deskripsi), 0, 5)) . (strlen($item->deskripsi) > 12 ? '...' : '') }}</p>
                             </a>
                         </div>
                         @endforeach

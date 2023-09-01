@@ -526,18 +526,25 @@
         <!-- ======= Team Section ======= -->
         <section id="team" class="team">
             <div class="container" data-aos="fade-up">
-
+                
                 <div class="section-title">
                     <h2>Team</h2>
                     <p>Check our Team</p>
                 </div>
+                @if( $team->count() == 0 )
+                <div class="pt-4">
+                    <h4>Maaf Belum Ada Data team</h4>
+                </div>
+                @else
 
                 <div class="row">
                     @foreach ($team as $item)
                     <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
                         <div class="member" data-aos="fade-up" data-aos-delay="100">
                             <div class="member-img">
-                                <img style="" src="{{asset('/storage/images/team/'.$item->photo)}}" class="img-fluid" alt="">
+                                <img style="" src="{{asset('/storage/images/team/'.$item->photo)}}" class="img-fluid"
+                                    alt="">
+
                                 <div class="social">
 
                                 </div>
@@ -549,53 +556,12 @@
                         </div>
                     </div>
                     @endforeach
+                    
 
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="200">
-                            <div class="member-img">
-                                <img src="{{URL::asset('/img/team/team-2.jpg')}}" class="img-fluid" alt="">
-                                <div class="social">
 
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Sarah Jhonson</h4>
-                                <span>Product Manager</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="300">
-                            <div class="member-img">
-                                <img src="{{URL::asset('/img/team/team-3.jpg')}}" class="img-fluid" alt="">
-                                <div class="social">
-
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>William Anderson</h4>
-                                <span>CTO</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-                        <div class="member" data-aos="fade-up" data-aos-delay="400">
-                            <div class="member-img">
-                                <img src="{{URL::asset('/img/team/team-4.jpg')}}" class="img-fluid" alt="">
-                                <div class="social">
-
-                                </div>
-                            </div>
-                            <div class="member-info">
-                                <h4>Amanda Jepson</h4>
-                                <span>Accountant</span>
-                            </div>
-                        </div>
-                    </div>
 
                 </div>
+                @endif
 
             </div>
         </section><!-- End Team Section -->

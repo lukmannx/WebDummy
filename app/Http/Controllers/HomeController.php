@@ -35,6 +35,7 @@ class HomeController extends Controller
 
     public function news()
     {
-        return view('news');
+        $data = Berita::all();
+        return view('news', compact('data'));
     }
 }

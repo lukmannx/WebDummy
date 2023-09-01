@@ -89,7 +89,7 @@
                                 <h5 class="card-title">{{$item->judul}}</h5>
                                 <div class="card-text pt-2">
                                     <p style="font-size: 15px;" class="text-muted">
-                                        {{ implode(' ', array_slice(explode(' ', $item->deskripsi), 0, 12)) . (strlen($item->deskripsi) > 12 ? '...' : '') }}
+                                        {{ implode(' ', array_slice(explode(' ', $item->deskripsi), 0, 7)) . (strlen($item->deskripsi) > 12 ? '...' : '') }}
                                     </p>
                                     <div class="d-flex justify-content-between pt-2">
                                         <p>
